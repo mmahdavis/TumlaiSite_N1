@@ -15,14 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import home_page
+from .views import *
 
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', home_page),
+    path('admin/', admin.site.urls, name="admin"),
+    path('', home_page, name="home_page"),
+    path('aboutus/', about_us, name="about_us"),
+    path('contact/', contact_us, name="contact_us"),
+    path('blog/<pk>/', blog_details, name="blog_details"),
+    path('bloglist/', blog_list, name="blog_list"),
 ]
 
 if settings.DEBUG:
