@@ -1,4 +1,3 @@
-{% load static %}
 /*
 
 Template: BizBag - Multipurpose Business Startup HTML Template
@@ -35,13 +34,13 @@ Overlay
 /*---------------------------------------------------------------------
 Import Css
 -----------------------------------------------------------------------*/
-@import url({% static "all.min.css" %});
-@import url({% static "mega_menu.min.css" %});
-@import url({% static "menu_menu_reset.min.css" %});
-@import url({% static "owl.carousel.min.css" %});
-@import url({% static "magnific-popup.css" %});
-@import url({% static "ionicons.min.css" %});
-@import url({% static "flaticon.css" %});
+@import url("all.min.css");
+@import url("mega_menu.min.css");
+@import url("menu_menu_reset.min.css");
+@import url("owl.carousel.min.css");
+@import url("magnific-popup.css");
+@import url("ionicons.min.css");
+@import url("flaticon.css");
 
 /*---------------------------------------------------------------------
 Font

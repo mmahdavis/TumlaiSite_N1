@@ -1,4 +1,3 @@
-{% load static %}
 /*
 
 Template: BizBag - Multipurpose Business Startup HTML Template
@@ -119,14 +118,14 @@ header .mega-menu .menu-mobile-collapse-trigger:after{top: 23px;}
 .slide-1 .slider-1 {
   height: 260px;
   width: 597px;  
-  background: url({% static '../images/slider/banner-1/02.png' %}) scroll no-repeat;
+  background: url('../images/slider/banner-1/02.png') scroll no-repeat;
   position: absolute;
   top: 32%;
 }
 .slide-1 .slider-2 {
   height: 75px;
   width: 140px;
-  background: url({% static '../images/slider/banner-1/03.jpg' %}) scroll no-repeat;
+  background: url('../images/slider/banner-1/03.jpg') scroll no-repeat;
   position: absolute;
   top: 7%;
   right: 36%;
@@ -134,7 +133,7 @@ header .mega-menu .menu-mobile-collapse-trigger:after{top: 23px;}
 .slide-1 .slider-3 {
   height: 120px;
   width: 85px;
-  background: url({% static '../images/slider/banner-1/04.png' %}) scroll no-repeat;
+  background: url('../images/slider/banner-1/04.png') scroll no-repeat;
   position: absolute;
   bottom: 50px;
   left: -20px;
@@ -142,7 +141,7 @@ header .mega-menu .menu-mobile-collapse-trigger:after{top: 23px;}
 .slide-1 .slider-4 {
   height: 120px;
   width: 85px;
-  background: url({% static '../images/slider/banner-1/05.png' %}) scroll no-repeat;
+  background: url('../images/slider/banner-1/05.png') scroll no-repeat;
   position: absolute;
   bottom: 50px;
   right: 16%;
@@ -165,7 +164,7 @@ header .mega-menu .menu-mobile-collapse-trigger:after{top: 23px;}
 .slide-2 .slider-1 {
   width: 125px;
   height: 125px;
-  background: url({% static '../images/slider/banner-2/02.png' %}) scroll no-repeat;
+  background: url('../images/slider/banner-2/02.png') scroll no-repeat;
   position: absolute;
   top: -20px;
   left: -40px;
@@ -173,7 +172,7 @@ header .mega-menu .menu-mobile-collapse-trigger:after{top: 23px;}
 .slide-2 .slider-2 {
   width: 91px;
   height: 90px;
-  background: url({% static '../images/slider/banner-2/03.png' %}) scroll no-repeat;
+  background: url('../images/slider/banner-2/03.png') scroll no-repeat;
   position: absolute;
   top: -35%;
   right: 0;
@@ -181,7 +180,7 @@ header .mega-menu .menu-mobile-collapse-trigger:after{top: 23px;}
 .slide-2 .slider-3 {
   width: 92px;
   height: 66px;
-  background: url({% static '../images/slider/banner-2/04.png' %}) scroll no-repeat;
+  background: url('../images/slider/banner-2/04.png') scroll no-repeat;
   position: absolute;
   top: 70px;
   right: 10px;
@@ -190,7 +189,7 @@ header .mega-menu .menu-mobile-collapse-trigger:after{top: 23px;}
 .slide-2 .slider-4 {
   width: 191px;
   height: 116px;
-  background: url({% static '../images/slider/banner-2/p1.jpg' %}) scroll no-repeat;
+  background: url('../images/slider/banner-2/p1.jpg') scroll no-repeat;
   position: absolute;
   top: 40%;
   bottom: auto;
@@ -199,7 +198,7 @@ header .mega-menu .menu-mobile-collapse-trigger:after{top: 23px;}
 .slide-2 .slider-5 {
   width: 114px;
   height: 148px;
-  background: url({% static '../images/slider/banner-2/p2.jpg' %}) scroll no-repeat;
+  background: url('../images/slider/banner-2/p2.jpg') scroll no-repeat;
   position: absolute;
   top: -20px;
   right: 37%;
@@ -207,7 +206,7 @@ header .mega-menu .menu-mobile-collapse-trigger:after{top: 23px;}
 .slide-2 .slider-6 {
   width: 114px;
   height: 161px;
-  background: url({% static '../images/slider/banner-2/p3.jpg' %}) scroll no-repeat;
+  background: url('../images/slider/banner-2/p3.jpg') scroll no-repeat;
   position: absolute;
   bottom: 30px;
   right: 10%;
@@ -221,7 +220,7 @@ header .mega-menu .menu-mobile-collapse-trigger:after{top: 23px;}
 .iq-slider-3{
   width: 100%;
   position: relative;
-  background: url({% static '../images/slider/banner-3/slider-bg3.png' %}) scroll no-repeat;
+  background: url('../images/slider/banner-3/slider-bg3.png') scroll no-repeat;
   background-size: cover;
   background-position: center center;
   min-height: 814px;
@@ -234,7 +233,7 @@ header .mega-menu .menu-mobile-collapse-trigger:after{top: 23px;}
 .slide-3 .slider-1 {
   height: 663px;
   width: 355px;  
-  background: url({% static '../images/slider/banner-3/02.png' %}) scroll no-repeat;
+  background: url('../images/slider/banner-3/02.png') scroll no-repeat;
   position: absolute;
   top: -11%;
   right: 24%;
@@ -242,7 +241,7 @@ header .mega-menu .menu-mobile-collapse-trigger:after{top: 23px;}
 .slide-3 .slider-2 {
   height: 99px;
   width: 149px;
-  background: url({% static '../images/slider/banner-3/03.png' %}) scroll no-repeat;
+  background: url('../images/slider/banner-3/03.png') scroll no-repeat;
   position: absolute;
   top: 87%;
   right: 81%;
@@ -250,7 +249,7 @@ header .mega-menu .menu-mobile-collapse-trigger:after{top: 23px;}
 .slide-3  .slider-3 {
   height: 128px;
   width: 87px;
-  background: url({% static '../images/slider/banner-3/04.png' %}) scroll no-repeat;
+  background: url('../images/slider/banner-3/04.png') scroll no-repeat;
   position: absolute;
   bottom: 83%;
   left: 12%;
@@ -258,7 +257,7 @@ header .mega-menu .menu-mobile-collapse-trigger:after{top: 23px;}
 .slide-3 .slider-4 {
   height: 130px;
   width: 88px;
-  background: url({% static '../images/slider/banner-3/05.png' %}) scroll no-repeat;
+  background: url('../images/slider/banner-3/05.png') scroll no-repeat;
   position: absolute;
   bottom:90%;
   right: 10%;
@@ -266,7 +265,7 @@ header .mega-menu .menu-mobile-collapse-trigger:after{top: 23px;}
 .slide-3 .slider-5 {
   height: 484px;
   width: 263px;
-  background: url({% static '../images/slider/banner-3/01.png' %}) scroll no-repeat;
+  background: url('../images/slider/banner-3/01.png') scroll no-repeat;
   position: absolute;
   bottom: -100px;
   right: 20px;
@@ -306,7 +305,7 @@ header .mega-menu .menu-mobile-collapse-trigger:after{top: 23px;}
 .slide-5 .slider-1 {
   width: 76px;
   height: 77px;
-  background: url({% static '../images/slider/banner-5/01.png' %}) scroll no-repeat;
+  background: url('../images/slider/banner-5/01.png') scroll no-repeat;
   position: absolute;
   top: 10%;
   left: 15%;
@@ -314,7 +313,7 @@ header .mega-menu .menu-mobile-collapse-trigger:after{top: 23px;}
 .slide-5 .slider-2 {
   width: 23px;
   height: 23px;
-  background: url({% static '../images/slider/banner-5/02.png' %}) scroll no-repeat;
+  background: url('../images/slider/banner-5/02.png') scroll no-repeat;
   position: absolute;
   top: 75%;
   left: 10%;
@@ -322,7 +321,7 @@ header .mega-menu .menu-mobile-collapse-trigger:after{top: 23px;}
 .slide-5 .slider-3 {
   width: 23px;
   height: 23px;
-  background: url({% static '../images/slider/banner-5/03.png' %}) scroll no-repeat;
+  background: url('../images/slider/banner-5/03.png') scroll no-repeat;
   position: absolute;
   top: 65%;
   right: 8%;
@@ -330,7 +329,7 @@ header .mega-menu .menu-mobile-collapse-trigger:after{top: 23px;}
 .slide-5 .slider-4 {
   width: 90px;
   height: 129px;
-  background: url({% static '../images/slider/banner-5/p1.png' %}) scroll no-repeat;
+  background: url('../images/slider/banner-5/p1.png') scroll no-repeat;
   position: absolute;
   top: -60%;
   right: 10px;
@@ -339,7 +338,7 @@ header .mega-menu .menu-mobile-collapse-trigger:after{top: 23px;}
 .slide-5 .slider-5 {
   width: 90px;
   height: 129px;
-  background: url({% static '../images/slider/banner-5/p2.png' %}) scroll no-repeat;
+  background: url('../images/slider/banner-5/p2.png') scroll no-repeat;
   position: absolute;
   top: -5%;
   bottom: auto;

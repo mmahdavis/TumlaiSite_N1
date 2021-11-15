@@ -6,14 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     {% block meta %}{% endblock meta %}
     <title>{% block title %}{% endblock title %}</title>
-    {% block links %} {% endblock links %}
-    {% block head_scripts %}  {% endblock head_scripts %}
+    <!-- Favicon -->
+      <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">  
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+      <!-- REVOLUTION STYLE SHEETS 
+      <link rel="stylesheet" type="text/css" href="{% static 'revsilder/css/settings.css'%}">-->
+      <!-- Typography CSS -->
+      <link rel="stylesheet" href="{% static 'css/typography.css' %}">
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <!-- Responsive CSS -->
+      <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+      <link rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}">
   </head>
   <body>
     <!-- loading -->
     <div id="loading">
       <div id="loading-center">
-        <img src={% static 'images/loader.gif' %} alt="loader">
+        <img src="{% static 'images/loader.gif' %}" alt="loader">
       </div>
     </div>
     <!-- loading End -->
@@ -78,7 +91,7 @@
                 <ul class="menu-logo">
                   <li>
                     <a href="index.html"
-                      ><img src={% static 'images/logo.png' %} alt="logo"
+                      ><img src="{% static 'images/logo.png' %}" alt="logo"
                       class="img-fluid"></a
                     >
                   </li>
@@ -212,7 +225,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="footer-logo">
                 <a href="#">
-                  <img class="img-fluid" src={% static 'images/logo.png' %}
+                  <img class="img-fluid" src="{% static 'images/logo.png' %}"
                   alt="bizbag1">
                 </a>
               </div>
@@ -329,6 +342,33 @@
       <a class="top" id="top" href="#top"> <i class="ion-ios-arrow-up"></i> </a>
     </div>
     <!-- back-to-top End -->
-    {% block scripts %}{% endblock scripts %}
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="{% static 'js/jquery-1.11.1.min.js' %}" ></script>
+      <!-- popper  -->
+      <script src="{% static 'js/popper.min.js' %}"></script>
+      <!--  bootstrap -->
+      <script src="{% static 'js/bootstrap.min.js' %}" ></script>
+      <!-- Appear JavaScript -->
+      <script src="{% static 'js/appear.js' %}"></script>
+      <!-- Mega menu JavaScript -->
+      <script src="{% static 'js/mega_menu.min.js' %}"></script>
+      <!-- Count Down JavaScript -->
+      <script src="{% static 'js/countdown.min.js' %}"></script>
+      <!-- Owl Carousel JavaScript -->
+      <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+      <!-- Magnific Popup JavaScript -->
+      <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+      <!--  Counter -->
+      <script src="{% static 'js/jquery.countTo.js' %}" ></script>
+      <!-- Skrollr JavaScript -->
+      <script src="{% static 'js/skrollr.js' %}"></script>
+      <!-- Isotope JavaScript -->
+      <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+      <!-- Wow JavaScript -->
+      <script src="{% static 'js/wow.min.js' %}"></script>
+      <!--  Custom -->
+      <script src="{% static 'js/custom.js' %}" ></script>
+      <!-- Retina JavaScript -->
+      <!-- <script src="{% static 'js/retina.min.js' %}"></script> -->
   </body>
 </html>
