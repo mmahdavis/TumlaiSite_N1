@@ -414,13 +414,13 @@ header .mega-menu .menu-mobile-collapse-trigger:after{top: 23px;}
 /*---------------------------------------------------------------------
                            list Style
 -----------------------------------------------------------------------*/
-.iq-list { margin: 0 0 30px 0; padding: 0; display: inline-block; width: 100%; }
+.iq-list { margin: 0 30px 0 0; padding: 0; display: inline-block; width: 100%; }
 .iq-list li { margin-bottom: 15px; list-style: none; }
 .iq-list li:last-child { margin-bottom: 0; }
-.iq-list li i { float: left; font-size: 24px; margin-top: 5px; margin-right: 15px; color: #ffb100; }
-.iq-list li span { display: table-cell; }
+.iq-list li i { float: right !important; font-size: 24px; margin-top: 5px; margin-right: 15px; color: #ffb100; }
+.iq-list li span { margin-right: 20px; }
 .our-project ul.iq-list { margin-bottom: 0; }
-.our-project ul.iq-list li { float: left; width: 50%; }
+.our-project ul.iq-list li { float: right; width: 50%; }
 .our-project .iq-list li i, .our-project .iq-list li span { color: #24262b; font-weight: bold; }
 .our-project .iq-list li:hover i, .our-project .iq-list li:hover span { color: #ffb100; }
 
