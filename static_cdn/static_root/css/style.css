@@ -83,7 +83,7 @@ header .mega-menu .drop-down-multilevel>li.active{background-color: #ffb100;colo
 header .mega-menu .drop-down-multilevel li:hover{background: #ffb100; }
 header .mega-menu .drop-down-multilevel a{font-size: 14px; padding: 8px 15px; color: #24262b; min-height: inherit;}
 header .mega-menu .drop-down-multilevel i.fa.fa-indicator{line-height: 28px; font-size: 16px; }
-header .mega-menu .menu-links>li:last-child{margin-right: 0px; background: #24262b; color: #ffffff!important;}
+
 
 header .mega-menu .menu-mobile-collapse-trigger{background: #ffb100;height: 35px;width: 45px;}
 header .mega-menu .menu-mobile-collapse-trigger:before, header .mega-menu .menu-mobile-collapse-trigger:after, header .mega-menu .menu-mobile-collapse-trigger span{background: #805600; height: 3px;width: 28px;}
