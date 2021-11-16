@@ -1,18 +1,7 @@
 {% extends 'main.html' %}
 {% load static %}  
 {% block title %}TuMLAI Blog{%endblock title %} 
-{% block links %}
-<!-- Favicon -->
-<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
-<!-- Typography CSS -->
-<link rel="stylesheet" href="{% static 'css/typography.css' %}" />
-<!-- Style CSS -->
-<link rel="stylesheet" href="{% static 'css/style.css' %}" />
-<!-- Responsive CSS -->
-<link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
-{% endblock links %} 
+
 {% block content %}
 <!-- Breadcrumb Start -->
 <section class="iq-breadcrumb text-left">
@@ -452,26 +441,4 @@
   </section>
   <!--Our Blog End -->
 </div>
-{% endblock content %} 
-{% block scripts %}
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
-<!-- popper  -->
-<script src="{% static 'js/popper.min.js' %}"></script>
-<!--  bootstrap -->
-<script src="{% static 'js/bootstrap.min.js' %}"></script>
-<!-- Appear JavaScript -->
-<script src="{% static 'js/appear.js' %}"></script>
-<!-- Mega menu JavaScript -->
-<script src="{% static 'js/mega_menu.min.js' %}"></script>
-<!-- Count Down JavaScript -->
-<script src="{% static 'js/countdown.min.js' %}"></script>
-<!-- Owl Carousel JavaScript -->
-<script src="{% static 'js/owl.carousel.min.js' %}"></script>
-<!-- Magnific Popup JavaScript -->
-<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
-<!--  Counter -->
-<script src="{% static 'js/jquery.countTo.js' %}"></script>
-<!-- Skrollr JavaScript -->
-<script src="{% static 'js/skrollr.js' %}"></script>
-{% endblock scripts %}
+{% endblock content %}
