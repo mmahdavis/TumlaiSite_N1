@@ -80,15 +80,15 @@
                 <!-- menu logo -->
                 <ul class="menu-logo">
                   <li>
-                    <a href="index.html"><img src="{% static 'images/TuMLAI_ofogi.jpg' %}" alt="logo"class="img-fluid"></a>
+                    <a href="index"><img src="{% static 'images/TuMLAI_ofogi.jpg' %}" alt="logo"class="img-fluid"></a>
                   </li>
                 </ul>
                 <!-- menu links -->
                 <ul class="menu-links">
-                  <li><a href="tumlai_blog.html">وبلاگ</a></li>
-                  <li><a href="contact-us.html">تماس با ما</a></li>
-                  <li><a href="about_us.html">درباره ما</a></li>
-                  <li class="active"><a href="javascript:void(0)">خانه</a></li>
+                  <li {% block blog_active %}{% endblock blog_active %}><a href="../bloglist">وبلاگ</a></li>
+                  <li {% block contact_active %}{% endblock contact_active %}><a href="../contact">تماس با ما</a></li>
+                  <li {% block about_active %}{% endblock about_active %}><a href="../aboutus">درباره ما</a></li>
+                  <li {% block home_active %}{% endblock home_active %}><a href="../">خانه</a></li>
                 </ul>
               </div>
             </div>
@@ -125,10 +125,10 @@
               <div class="widget">
                 <h4 class="footer-title">منو</h4>
                 <ul>
-                  <li><a href="index.html" aria-current="page">خانه</a></li>
-                  <li><a href="about_us.html">درباره ما </a></li>
-                  <li><a href="contact_us.html">ارتباط با ما</a></li>
-                  <li><a href="tumlai_blog.html">وبلاگ</a></li>
+                  <li><a href="index" aria-current="page">خانه</a></li>
+                  <li><a href="aboutus">درباره ما </a></li>
+                  <li><a href="contact">ارتباط با ما</a></li>
+                  <li><a href="bloglist">وبلاگ</a></li>
                 </ul>
               </div>
             </div>

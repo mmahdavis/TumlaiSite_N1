@@ -1,22 +1,18 @@
 {% extends 'main.html' %}
 {% load static %} 
 {% block title %}Contact Us{%endblock title %}
-
+{% block contact_active %} class="active" {% endblock contact_active %}
 {% block content %}
 <!-- Breadcrumb Start -->
-<section class="iq-breadcrumb text-left">
+<section class="iq-breadcrumb text-left" style="direction: rtl;">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-8 text-left mb-4 mb-lg-0 align-self-center">
-        <h2 class="title">Contact Us</h2>
+      <div class="col-lg-8 col-md-8 text-right mb-4 mb-lg-0 align-self-center">
+        <h2 class="title">تماس با ما</h2>
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-              <a href="index.html"
-                ><i class="fa fa-home" aria-hidden="true"></i>Home</a
-              >
-            </li>
-            <li class="breadcrumb-item active">Contact Us</li>
+            <li class="breadcrumb-item"><a href="index"><i class="fa fa-home" aria-hidden="true"></i>صفحه اصلی</a></li>
+            <li class="breadcrumb-item active"> تماس با ما</li>
           </ol>
         </nav>
       </div>
@@ -30,34 +26,30 @@
 <!-- Main-Content Start -->
 <div class="main-content">
   <!-- Contact Us Start -->
-  <section class="iq-contactus gray-bg">
+  <section class="iq-contactus gray-bg" style="direction: rtl;">
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
-          <iframe
-            class="w-100 contact-ifream"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.840289118572!2d144.95373631550405!3d-37.81720974201396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sin!4v1543402448828"
-            allowfullscreen
-          ></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3215.011606611842!2d59.591395044210806!3d36.31202538749005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f6c91a17eff3ef3%3A0x2ae658cab9c0566e!2z2YXYsdqp2LIg2K7YsduM2K8g2LPYp9uM2YbYpw!5e0!3m2!1sfa!2s!4v1637059175032!5m2!1sfa!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
         <div class="col-lg-6">
-          <div class="title-box text-left">
-            <span class="text-warning">Get in Touch</span>
-            <h2 class="title">Contact Us</h2>
+          <div class="title-box text-right">
+            <span class="text-warning">با توملای تماس بگیرید</span>
+            <h2 class="title">تماس با ما</h2>
             <p class="mb-0">
-              It is a long established fact that a reader will be distracted
+              تیم توملای اماده ی پاسخگویی به شما در حداقل زمان ممکن است
             </p>
           </div>
-          <form class="contact-us" id="contact" method="post">
+          <form class="contact-us" id="contact" method="post" style="text-align: right;">
             <div class="row">
               <div class="col-md-6">
                 <label
-                  >Your Name<br />
+                  >نام<br />
                   <span class="form-control-wrap your-name">
                     <input
                       type="text"
                       name="name"
-                      placeholder="Your Name"
+                      placeholder="نام"
                       class="form-control text"
                       aria-required="true"
                       aria-invalid="false"
@@ -66,12 +58,12 @@
               </div>
               <div class="col-md-6">
                 <label
-                  >Your Email<br />
+                  >ایمیل<br />
                   <span class="form-control-wrap your-email">
                     <input
                       type="email"
                       name="email"
-                      placeholder="Email"
+                      placeholder="ایمیل"
                       class="form-control text email"
                       aria-required="true"
                       aria-invalid="false"
@@ -79,12 +71,12 @@
                 </label>
               </div>
               <div class="col-xl-12">
-                <label>Subject<br />
+                <label>موضوع<br />
                   <span class="form-control-wrap your-subject">
                     <input
                       type="text"
                       name="subject"
-                      placeholder="Subject"
+                      placeholder="موضوع"
                       class="form-control text"
                       aria-invalid="false"
                   /></span>
@@ -92,11 +84,11 @@
               </div>
               <div class="col-xl-12">
                 <label
-                  >Your Message<br />
+                  >پیام شما<br />
                   <span class="form-control-wrap your-message">
                     <textarea
                       name="message"
-                      placeholder="Message"
+                      placeholder="پیام"
                       class="form-control textarea"
                       aria-invalid="false"
                     ></textarea>
@@ -111,7 +103,7 @@
                   value="Send"
                   class="button btn-yellow"
                 >
-                  Send message
+                  ارسال
                 </button>
               </div>
             </div>
@@ -127,9 +119,9 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="title-box text-center">
-            <span class="text-warning">Get In Touch</span>
-            <h2 class="title">Quick Support</h2>
-            <p class="mb-0">You can get all the contact information.</p>
+            <span class="text-warning">با توملای در تماس باشید</span>
+            <h2 class="title">پشتیبانی سریع</h2>
+            <p class="mb-0">اصول ما کاهش زمان است</p>
           </div>
         </div>
       </div>
@@ -140,8 +132,8 @@
               <i aria-hidden="true" class="ion ion-ios-location-outline"></i>
             </div>
             <div class="fancy-content">
-              <h4>Our Address</h4>
-              <p>1234 North Avenue Luke Lane, South Bend, IN 360001</p>
+              <h4>ادرس توملای </h4>
+              <p>مشهد، تقاطع مجد و قرنی، برج ساینا، ط اول، واحد 122</p>
             </div>
           </div>
         </div>
@@ -151,10 +143,10 @@
               <i aria-hidden="true" class="ion ion-ios-email-outline"></i>
             </div>
             <div class="fancy-content">
-              <h4>Our Email Address</h4>
+              <h4>ایمیل توملای</h4>
               <p>
-                support@bizbag.com<br />
-                support@demo.com
+                support@tumlai.ir<br />
+                support@tumlai.ir
               </p>
             </div>
           </div>
@@ -165,10 +157,10 @@
               <i aria-hidden="true" class="ion ion-ios-telephone-outline"></i>
             </div>
             <div class="fancy-content">
-              <h4>Our Phone Number</h4>
+              <h4>تلفن توملای</h4>
               <p>
-                +11 123 456 7890<br />
-                +11 123 456 7890
+                +98 915 700 6752<br />
+                +98 915 700 6752
               </p>
             </div>
           </div>
@@ -181,12 +173,12 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-6">
-          <h3 class="subscribe-heading">Subscribe Now</h3>
+          <h3 class="subscribe-heading">به ما بپیوندید</h3>
         </div>
         <div class="col-sm-6">
           <div class="form-fields">
-            <input type="email" name="EMAIL" placeholder="Your Email" required=""/>
-            <a class="button btn-yellow" href="#">Sign Up</a>
+            <input type="email" name="EMAIL" placeholder="ایمیل" required=""/>
+            <a class="button btn-yellow" href="#">ثبت</a>
           </div>
         </div>
       </div>
