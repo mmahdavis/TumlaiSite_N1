@@ -85,10 +85,10 @@
                 </ul>
                 <!-- menu links -->
                 <ul class="menu-links">
-                  <li {% block blog_active %}{% endblock blog_active %}><a href="../bloglist">وبلاگ</a></li>
-                  <li {% block contact_active %}{% endblock contact_active %}><a href="../contact">تماس با ما</a></li>
-                  <li {% block about_active %}{% endblock about_active %}><a href="../aboutus">درباره ما</a></li>
-                  <li {% block home_active %}{% endblock home_active %}><a href="../">خانه</a></li>
+                  <li {% block blog_active %}{% endblock blog_active %}><a href="{% url 'blog_list' %}">وبلاگ</a></li>
+                  <li {% block contact_active %}{% endblock contact_active %}><a href="{% url 'contact_us' %}">تماس با ما</a></li>
+                  <li {% block about_active %}{% endblock about_active %}><a href="{% url 'about_us' %}">درباره ما</a></li>
+                  <li {% block home_active %}{% endblock home_active %}><a href="{% url 'home_page' %}">خانه</a></li>
                 </ul>
               </div>
             </div>

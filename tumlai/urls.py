@@ -26,7 +26,7 @@ urlpatterns = [
     path('aboutus/', about_us, name="about_us"),
     path('contact/', contact_us, name="contact_us"),
     path('blog/<pk>/', blog_details, name="blog_details"),
-    path('bloglist/', blog_list, name="blog_list"),
+    path('blogs/', blog_list, name="blog_list"),
 ]
 
 if settings.DEBUG:
