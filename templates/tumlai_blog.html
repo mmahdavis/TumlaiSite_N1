@@ -120,9 +120,10 @@
                      </div>
                   </div>
                   <div class="col-lg-8 col-md-8 order-lg-1 order-2">
+                     {% for posts in posts %}
                      <div class="iq-blog-box">
                         <div class="iq-blog-image clearfix">
-                           <img src="{% static 'images/blog/01.jpg' %}" class="img-fluid center-block" alt="blogimage0">
+                           <img src="{{ posts.image.url }}" class="img-fluid center-block" alt="blogimage0">
                            <ul class="iq-blogtag">
                               <li><a href="#">Technology</a></li>
                            </ul>
@@ -131,91 +132,20 @@
                            <div class="iq-blog-meta">
                               <ul>
                                  <li class="list-inline-item">
-                                    <a href="#" class="main-color" rel="bookmark">May 18, 2019</a>
+                                    <a href="#" class="main-color" rel="bookmark">{{ posts.data_date }}</a>
                                  </li>
                               </ul>
                            </div>
                            <div class="blog-title">
                               <a href="blog-details.html">
-                                 <h5>Construction industry</h5>
+                                 <h5>{{ posts.title }}</h5>
                               </a>
                            </div>
-                           <p>They bring to you a host of created infographics that contain the latest digital marketing </p>
-                           <a class="btn-link" href="blog-details.html">Read More<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                           <p>{{ posts.content_text }}</p>
+                           <a class="btn-link" href="/blog/{{ posts.id }}">Read More<i class="fa fa-angle-right" aria-hidden="true"></i></a>
                         </div>
                      </div>
-                     <div class="iq-blog-box">
-                        <div class="iq-blog-image clearfix">
-                           <img src="{% static 'images/blog/02.jpg' %}" class="img-fluid center-block" alt="blogimage1">
-                           <ul class="iq-blogtag">
-                              <li><a href="#">Business</a></li>
-                           </ul>
-                        </div>
-                        <div class="iq-blog-detail">
-                           <div class="iq-blog-meta">
-                              <ul>
-                                 <li class="list-inline-item">
-                                    <a href="#" class="main-color" rel="bookmark">May 18, 2019</a>
-                                 </li>
-                              </ul>
-                           </div>
-                           <div class="blog-title">
-                              <a href="blog-details.html">
-                                 <h5>Life Lack Meaning</h5>
-                              </a>
-                           </div>
-                           <p>If you are keen on knowing new things about the digital marketing industry then Marketing Land.</p>
-                           <a class="btn-link" href="blog-details.html">Read More<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                        </div>
-                     </div>
-                     <div class="iq-blog-box">
-                        <div class="iq-blog-image clearfix">
-                           <img src="{% static 'images/blog/03.jpg' %}" class="img-fluid center-block" alt="blogimage2">
-                           <ul class="iq-blogtag">
-                              <li><a href="#">Design</a></li>
-                           </ul>
-                        </div>
-                        <div class="iq-blog-detail">
-                           <div class="iq-blog-meta">
-                              <ul>
-                                 <li class="list-inline-item">
-                                    <a href="#" class="main-color" rel="bookmark">May 18, 2019</a>
-                                 </li>
-                              </ul>
-                           </div>
-                           <div class="blog-title">
-                              <a href="blog-details.html">
-                                 <h5>Content Marketing</h5>
-                              </a>
-                           </div>
-                           <p>Content Marketing  offers some of the best advice around in terms of how content can help your brand.</p>
-                           <a class="btn-link" href="blog-details.html">Read More<i class="fa fa-angle-right"  aria-hidden="true"></i></a>
-                        </div>
-                     </div>
-                     <div class="iq-blog-box">
-                        <div class="iq-blog-image clearfix">
-                           <img src="{% static 'images/blog/01.jpg' %}" class="img-fluid center-block" alt="blogimage0">
-                           <ul class="iq-blogtag">
-                              <li><a href="#">Technology</a></li>
-                           </ul>
-                        </div>
-                        <div class="iq-blog-detail">
-                           <div class="iq-blog-meta">
-                              <ul>
-                                 <li class="list-inline-item">
-                                    <a href="#" class="main-color" rel="bookmark">May 18, 2019</a>
-                                 </li>
-                              </ul>
-                           </div>
-                           <div class="blog-title">
-                              <a href="blog-details.html">
-                                 <h5>Construction industry</h5>
-                              </a>
-                           </div>
-                           <p>They bring to you a host of created infographics that contain the latest digital marketing </p>
-                           <a class="btn-link" href="right-sidebar-blog.html">Read More<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                        </div>
-                     </div>
+                     {% endfor %}
                      <ul class="page-numbers">
                         <li><span aria-current="page" class="page-numbers current">1</span></li>
                         <li><a class="page-numbers" href="#">2</a></li>

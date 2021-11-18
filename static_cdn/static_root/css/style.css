@@ -44,6 +44,9 @@ Design and Developed by: iqonicthemes.in
 /*---------------------------------------------------------------------
                            Header
 -----------------------------------------------------------------------*/
+.dirrtl{
+  direction: rtl;
+}
 header { position: relative; width: 100%; background: #ffffff; display: inline-block; z-index: 9999; -webkit-transition: all 0.3s ease-out 0s; -moz-transition: all 0.3s ease-out 0s; -ms-transition: all 0.3s ease-out 0s; -o-transition: all 0.3s ease-out 0s; transition: all 0.3s ease-out 0s; }
 
 /* Header Top */
@@ -414,13 +417,13 @@ header .mega-menu .menu-mobile-collapse-trigger:after{top: 23px;}
 /*---------------------------------------------------------------------
                            list Style
 -----------------------------------------------------------------------*/
-.iq-list { margin: 0 0 30px 0; padding: 0; display: inline-block; width: 100%; }
+.iq-list { margin: 0 30px 0 0; padding: 0; display: inline-block; width: 100%; }
 .iq-list li { margin-bottom: 15px; list-style: none; }
 .iq-list li:last-child { margin-bottom: 0; }
-.iq-list li i { float: left; font-size: 24px; margin-top: 5px; margin-right: 15px; color: #ffb100; }
-.iq-list li span { display: table-cell; }
+.iq-list li i { float: right !important; font-size: 24px; margin-top: 5px; margin-right: 15px; color: #ffb100; }
+.iq-list li span { margin-right: 20px; }
 .our-project ul.iq-list { margin-bottom: 0; }
-.our-project ul.iq-list li { float: left; width: 50%; }
+.our-project ul.iq-list li { float: right; width: 50%; }
 .our-project .iq-list li i, .our-project .iq-list li span { color: #24262b; font-weight: bold; }
 .our-project .iq-list li:hover i, .our-project .iq-list li:hover span { color: #ffb100; }
 
@@ -544,7 +547,7 @@ i.flaticon::before {font-size: inherit; margin-left: 0; }
 -----------------------------------------------------------------------*/
 .feature-box { display: flex; }
 .feature-number { color: #efefef; font-size: 80px; line-height: 90px; font-weight: bold; font-family: 'Poppins', sans-serif; margin-right: 30px; align-items: start; }
-.feature-info { flex: 1; }
+.feature-info { flex: 1; padding-right: 15px; text-align: right;}
 .feature-box:hover .feature-number { color: #ffb100; }
 
 /*---------------------------------------------------------------------
@@ -581,7 +584,7 @@ i.flaticon::before {font-size: inherit; margin-left: 0; }
 
 
 /*team2*/
-.iq-team2 .iq-team-img {background: #ffffff; text-align: center; margin: 0 auto; border: 2px solid #24262b; border-radius: 100%; height: 262px; width: 262px; padding: 15px; margin-bottom: 15px; overflow: hidden; }
+.iq-team2 .iq-team-img {background: #ffffff; text-align: center; margin-left: 59px !important; margin-right: 59px !important; border: 2px solid #24262b; border-radius: 100%; height: 262px; width: 262px; padding: 15px; margin-bottom: 15px; overflow: hidden; }
 .owl-carousel .owl-item .iq-team2  img { width: auto; height: 100%; margin: 0 auto; }
 .iq-team2 .share { position: relative; bottom: 0; margin-top: 15px; }
 .iq-team2  .share ul li { float: none; }
@@ -848,11 +851,11 @@ footer.footer5 .social-icone ul li a{color: #ffffff;}
 .widget { margin-bottom: 45px; padding: 16px; -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; display: inline-block; width: 100%; float: left; position: relative; background: #ffffff; }
 .widget:last-child { margin-bottom: 0; }
 .widget .widget-title { margin-bottom: 15px; padding-bottom: 0; font-size: 1.25em; position: relative; }
-ul.category li a:before, ul.archives li a:before { position: absolute; content: "\f111"; color: #ffb100; top: 9px; font-size: 5px; left: 0; font-family: "Font Awesome 5 Free"; font-weight: 900; line-height: normal; transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out;}
+ul.category li a:before, ul.archives li a::after { position: absolute; content: "\f111"; color: #ffb100; top: 9px; font-size: 5px; right: 0; font-family: "Font Awesome 5 Free"; font-weight: 900; line-height: normal; transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out;}
 /*SideBar - Search*/
 .search-form { position: relative; }
 .search-form label { display: none; }
-.search-form input { padding-right: 40px; box-shadow: none; border-radius: 0; color: #24262b; border: 2px solid #24262b; background: #fff; transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; }
+.search-form input { text-align: right; padding-right: 40px; box-shadow: none; border-radius: 0; color: #24262b; border: 2px solid #24262b; background: #fff; transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; }
 .search-form input:focus, .search-form input[type=text]:focus, .search-form input[type=email]:focus, .search-form input[type=search]:focus, .search-form input[type=password]:focus { border: 2px solid #ffb100; }
 .search-form .search-submit { position: absolute; right: 0; top: 0; color: #24262b; cursor: pointer; padding: 5px 15px; font-size: 18px; background: none; border: none; outline: none; box-shadow: none; }
 .search-form .search-submit .screen-reader-text { display: none; }
@@ -862,7 +865,7 @@ ul.category li a:before, ul.archives li a:before { position: absolute; content: 
 .widget ul li { margin-bottom: 10px; list-style: none; }
 .widget ul li:last-child { margin-bottom: 0; }
 .widget ul ul.children { padding-left: 25px; }
-.widget ul li a { color: #6f6f6f; position: relative; padding-left: 15px; -ms-word-wrap: break-word; word-wrap: break-word; }
+.widget ul li a { color: #6f6f6f; position: relative; padding-left: 15px; padding-right: 15px; -ms-word-wrap: break-word; word-wrap: break-word; }
 .widget ul li a:hover { color: #ffb100!important; cursor: pointer; text-decoration: none; }
 footer ul.menu li,footer ul.category li{position: relative;display: block;}
 footer ul.menu li::before ,footer ul.category li:before{ position: absolute; content: "\f111"; color: #ffb100; top: 21px; font-size: 5px; left: 0; font-family: "Font Awesome 5 Free"; font-weight: 900; line-height: normal; transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out; }

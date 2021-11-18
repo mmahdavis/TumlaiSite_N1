@@ -139,6 +139,7 @@
             </div>
          </section>
          <!-- Fancy Box End -->
+
          <!-- Features Box Start -->
          <section class="features-box">
             <div class="container">
@@ -217,6 +218,7 @@
             </div>
          </section>
          <!-- Why Choose Us End -->
+
          <!-- Project Start -->
          <section class="iq-project gray-bg">
             <div class="container">
@@ -273,6 +275,7 @@
             </div>
          </section>
          <!-- Project End -->
+
          <!-- Our Team start -->
          <section id="our-team" class="our-team">
             <div class="container">
@@ -346,8 +349,9 @@
             </div>
          </section>
          <!-- Our Team  end -->
+
          <!-- Client Testimonial start -->
-         <section id="our-clients" class="our-clients gray-bg">
+         <!-- <section id="our-clients" class="our-clients gray-bg">
             <div class="container">
                <div class="row">
                   <div class="col-sm-12">
@@ -382,10 +386,12 @@
             <div class="scrolling-text bottam right default">
                <div data-bottom="transform:translatex(300px)" data-top="transform:translatex(0);">اعتماد شما اعتبار ما</div>
             </div>
-         </section>
+         </section> -->
          <!--Client Testimonial end -->
+
          <!-- Our Blog Start -->
-         <section id="our-blog" class="blog">
+
+         <section id="our-blog" class="blog gray-bg">
             <div class="container">
                <div class="row">
                   <div class="col-sm-12">
@@ -399,84 +405,36 @@
                <div class="row">
                   <div class="col-lg-12 col-md-12">
                      <div class="owl-carousel" data-autoplay="true" data-loop="true" data-nav="false" data-dots="true" data-items="3" data-items-laptop="3" data-items-tab="2" data-items-mobile="1" data-items-mobile-sm="1" data-margin="30">
+                        {% for posts in posts %}
                         <div class="item">
                            <div class="iq-blog-box">
                               <div class="iq-blog-image clearfix">
-                                 <img src="{% static 'images/blog/01.jpg' %}" class="img-fluid center-block" alt="blogimage0">
-                                 <ul class="iq-blogtag">
-                                    <li><a href="#">Technology</a></li>
-                                 </ul>
+                                 <img src="{{ posts.image.url }}" class="img-fluid center-block" alt="blogimage0">
+                                 <!-- <ul class="iq-blogtag">
+                                    {% for category in category %}
+                                    <li><a href="#">{{ category.0 }}</a></li>
+                                    {% endfor %}
+                                 </ul> -->
                               </div>
                               <div class="iq-blog-detail">
                                  <div class="iq-blog-meta">
                                     <ul>
                                        <li class="list-inline-item">
-                                          <a href="#" class="main-color" rel="bookmark">May 18, 2019</a>
+                                          <a href="#" class="main-color" rel="bookmark">{{ posts.data_date }}</a>
                                        </li>
                                     </ul>
                                  </div>
                                  <div class="blog-title">
                                    <a href="blog-details.html">
-                                       <h5>Construction industry</h5>
+                                       <h5>{{ posts.title }}</h5>
                                     </a>
                                  </div>
-                                 <p>They bring to you a host of created infographics that contain the latest digital marketing </p>
-                                 <a class="btn-link" href="blog-details.html">بیشتر بدانید<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                 <p>{{ posts.summary }} </p>
+                                 <a class="btn-link" href="blog/{{ posts.id }}"/>بیشتر بدانید<i class="fa fa-angle-right" aria-hidden="true"></i></a>
                               </div>
                            </div>
                         </div>
-                        <div class="item">
-                           <div class="iq-blog-box">
-                              <div class="iq-blog-image clearfix">
-                                 <img src="{% static 'images/blog/02.jpg' %}" class="img-fluid center-block" alt="blogimage1">
-                                 <ul class="iq-blogtag">
-                                    <li><a href="#">Business</a></li>
-                                 </ul>
-                              </div>
-                              <div class="iq-blog-detail">
-                                 <div class="iq-blog-meta">
-                                    <ul>
-                                       <li class="list-inline-item">
-                                          <a href="#" class="main-color" rel="bookmark">May 18, 2019</a>
-                                       </li>
-                                    </ul>
-                                 </div>
-                                 <div class="blog-title">
-                                   <a href="blog-details.html">
-                                       <h5>Life Lack Meaning</h5>
-                                    </a>
-                                 </div>
-                                 <p>If you are keen on knowing new things about the digital marketing industry then Marketing Land.</p>
-                                 <a class="btn-link" href="blog-details.html">بیشتر بدانید<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="item">
-                           <div class="iq-blog-box">
-                              <div class="iq-blog-image clearfix">
-                                 <img src="{% static 'images/blog/03.jpg' %}" class="img-fluid center-block" alt="blogimage2">
-                                 <ul class="iq-blogtag">
-                                    <li><a href="#">Design</a></li>
-                                 </ul>
-                              </div>
-                              <div class="iq-blog-detail">
-                                 <div class="iq-blog-meta">
-                                    <ul>
-                                       <li class="list-inline-item">
-                                          <a href="#" class="main-color" rel="bookmark">May 18, 2019</a>
-                                       </li>
-                                    </ul>
-                                 </div>
-                                 <div class="blog-title">
-                                   <a href="blog-details.html">
-                                       <h5>Content Marketing</h5>
-                                    </a>
-                                 </div>
-                                 <p>Content Marketing  offers some of the best advice around in terms of how content can help your brand.</p>
-                                 <a class="btn-link" href="blog-details.html">بیشتر بدانید<i class="fa fa-angle-right"  aria-hidden="true"></i></a>
-                              </div>
-                           </div>
-                        </div>
+                        {% endfor %}
                      </div>
                   </div>
                </div>
@@ -493,7 +451,7 @@
       <!-- Main-Pricing-Content Start -->
       <div class="main-content">
          <!-- Pricing Plan Start  -->
-         <section class="overview-block-ptb gray-bg">
+         <section class="overview-block-ptb">
             <div class="container-fluid">
                <div class="row">
                   <div class="col-lg-12">
@@ -581,7 +539,7 @@
          </section>
          <!-- Pricing Plan End  -->
          <!-- Our Clients -->
-         <section id="our-clients" class="our-clients gray-bg">
+         <!-- <section id="our-clients" class="our-clients gray-bg">
             <div class="container">
                <div class="row">
                   <div class="col-sm-12">
@@ -642,7 +600,7 @@
             <div class="scrolling-text top left default">
                <div data-bottom="transform:translatex(-300px)" data-top="transform:translatex(0);">نتیجه اعتماد به توملای</div>
             </div>
-         </section>
+         </section> -->
          <!-- Our Clients End-->
       <div class="footer-subscribe">
             <div class="container">

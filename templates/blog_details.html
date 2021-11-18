@@ -10,16 +10,17 @@
       <div class="col-lg-4 col-md-4 text-right">
         <img src="{% static 'images/blog/01.png' %}" class="img-fluid" alt="#" />
       </div>
-      <div class="col-lg-8 col-md-8 text-left mb-4 mb-lg-0 align-self-center">
-        <h2 class="title">بلاگ</h2>
+      <div class="col-lg-8 col-md-8 text-right mb-4 mb-lg-0 align-self-center dirrtl">
+        <h2 class="title">{{ posts.title }}</h2>
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item">
-              <a href="index.html"
-                ><i class="fa fa-home" aria-hidden="true"></i>خانه</a
-              >
+              <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>خانه</a>
             </li>
-            <li class="breadcrumb-item active">بلاگ</li>
+            <li class="breadcrumb-item">
+              <a href="/blogs">بلاگ</a>
+            </li>
+            <li class="breadcrumb-item active"> {{ posts.title }}</li>
           </ol>
         </nav>
       </div>
@@ -122,11 +123,11 @@
             </ul>
           </div>
         </div>
-        <div class="col-lg-8 col-md-8 order-lg-1 order-2">
+        <div class="col-lg-8 col-md-8 order-lg-1 order-2 text-right dirrtl">
           <div class="iq-blog-box">
             <div class="iq-blog-image clearfix">
               <img
-                src="{% static 'images/blog/01.jpg' %}"
+                src="{{ posts.image.url }}"
                 class="img-fluid center-block"
                 alt="blogimage0"
               />
@@ -136,88 +137,18 @@
                 <ul>
                   <li class="list-inline-item">
                     <a href="#" class="main-color" rel="bookmark"
-                      >MAY 14, 2019</a
+                      >{{ posts.data_date }}</a
                     >
                   </li>
                 </ul>
               </div>
               <div class="blog-content">
                 <div class="blog-content">
-                  <h4 class="mb-2">Integer sollicitudin libero quam</h4>
-                  <p>
-                    This live blog allowed people, who may not have been able to
-                    make it to the actual event, stay informed and become a part
-                    of the discussion even though they were not in attendance.
-                    Their blog lets you interact with various industry leaders,
-                    while providing their audience with content that is engaging
-                    and educational.
-                  </p>
-                  <blockquote class="quote-style">
-                    <p>
-                      Sed vehicula odio sed velit volutpat aliquet. Sed
-                      dignissim enim et venenatis.<br />– maxin belly
-                    </p>
-                  </blockquote>
-                  <ul class="mb-3">
-                    <li>Incidunt vitae quae facere</li>
-                    <li>Lorem ipsum dolor sit amet</li>
-                    <li>Incidunt vitae quae facere</li>
-                    <li>Tenetur laborum rutrum</li>
-                  </ul>
-                  <h4 class="mb-2">The rutrum ullamcorper mattis</h4>
-                  <p>
-                    Content is an essential aspect of any digital marketing
-                    campaign. The Content Marketing Institute offers some of the
-                    best advice around in terms of how content can help your
-                    brand. From industry trends to best practices, their posts
-                    offer helpful advice on how to create the best strategies
-                    for your business and how your content marketing should play
-                    a role in the “bigger picture.
-                  </p>
-                  <p></p>
-                  <h4 class="mb-2">The stand Lorem Ipsum passage</h4>
-                  <p>
-                    Curabitur pulvinar mi in lacinia convallis. Nulla sagittis
-                    urna hendrerit metus maximus luctus. Phasellus ac
-                    condimentum lacus. Mauris efficitur ultrices augue ut
-                    interdum. Aliquam placerat finibus ultrices. Nam pretium
-                    fermentum ante, porta luctus eros sodales et. Ut
-                    sollicitudin semper elit, vel efficitur justo ultrices quis.
-                    Etiam vel tortor rhoncus, malesuada ligula tempus, pulvinar
-                    nisi. Cras mi odio, efficitur pharetra lacinia vel, cursus
-                    at dolor.
-                  </p>
-                  <ul class="mb-3">
-                    <li>Lorem ipsum line one</li>
-                    <li>Incidunt vitae line two</li>
-                    <li>Lorem ipsum line three</li>
-                  </ul>
-                  <h4 class="mb-2">Pellentesque ultriciesdictum</h4>
-                  <p>
-                    Nullam commodo sem id mollis pretium. Duis sed aliquam quam,
-                    rutrum placerat massa. Etiam nec hendrerit purus, ut laoreet
-                    libero. Pellentesque habitant morbi tristique senectus et
-                    netus et malesuada fames ac turpis egestas. Donec bibendum
-                    cursus mi, in dignissim enim posuere quis. Integer
-                    sollicitudin libero quam, id eleifend arcu malesuada vel.
-                    Cras justo tortor, mollis eget dapibus in, egestas sed enim.
-                    Donec bibendum neque lorem, eget commodo nulla finibus sed.
-                    Aliquam erat volutpat. Nullam sed euismod libero, lobortis
-                    rutrum urna. Donec et urna tellus.
-                  </p>
-                  <h4 class="mb-2">
-                    <strong>Lorem ipsum dolor utaliquip</strong>
-                  </h4>
-                  <p class="mb-0">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod temporincididunt ut labore et dolore
-                    magnaaliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi utaliquip ex ea commodo
-                    consequat.Duis aute irure dolor in reprehenderit in
-                    voluptate velit esse cillum dolore eu fugiatnulla pariatur.
-                    Excepteur sintoccaecat cupidatat non proident, sunt in culpa
-                    qui officia deserunt.
-                  </p>
+                  <h4 class="mb-2">{{ posts.title }}</h4>
+                  <p>{{ posts.content_text }}</p>
+                  <br />
+                  <br />
+                  <p>نویسنده : {{ posts.author }}</p>
                 </div>
               </div>
             </div>
