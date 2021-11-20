@@ -37,9 +37,36 @@ Design and Developed by: iqonicthemes.in
 :: Portfolio
  
 
+
+
+
 ======================================
 [ End table content ]
 ======================================*/
+
+/*---------------------------------------------------------------------
+                           set font site
+-----------------------------------------------------------------------*/
+@font-face {
+  @font-face {
+    font-family: 'Bnazanin1';
+    src: url('../fonts/bnazanin.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/bnazanin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/bnazanin.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/bnazanin.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../fonts/bnazanin.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/bnazanin.svg#svgFontName') format('svg'); /* Legacy iOS */
+  }
+}
+
+body{
+  font-family: 'Bnazanin1';
+}
+
+/*---------------------------------------------------------------------
+                           end font section
+-----------------------------------------------------------------------*/
+
 
 /*---------------------------------------------------------------------
                            Header
@@ -1053,8 +1080,8 @@ footer ul.category li:before{top: 13px;}
 .priceing-title { border-bottom: 1px solid #6f6f6f;max-height: 315px;min-height: 315px; }
 ul.pricing-list { margin: 30px 0; list-style: none; padding-left: 0; }
 ul.pricing-list li { color: #24262b; position: relative; padding-left: 0px; font-weight: 600; }
-ul.pricing-list li::before { font: normal normal normal 20px/1 FontAwesome; font-family: "Font Awesome 5 Free"; content: "\f058"; font-size: 16px; font-weight: 900; color: #24262b; margin-right: 15px; }
-ul.pricing-list li.disable::before { color: #ffb100; }
+ul.pricing-list li::after { font: normal normal normal 20px/1 FontAwesome; font-family: "Font Awesome 5 Free"; content: "\f058"; font-size: 16px; font-weight: 900; color: #24262b; margin-right: 15px; }
+ul.pricing-list li.disable::after { color: #ffb100; }
 .iq-pricing:hover { border-color: #ffb100; transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out; }
 .iq-pricing:hover .button { background: #ffb100; transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out; }
 
@@ -1062,13 +1089,13 @@ ul.pricing-list li.disable::before { color: #ffb100; }
 .iq-pricing-table { border: 2px solid #24262b; padding: 60px; }
 .iq-pricing-table  .priceing-heading  h2 { color: #ffb100; font-size: 60px; }
 .iq-pricing-table  .priceing-heading  h2 span { font-size: 16px; font-weight: 400; }
-.iq-pricing-table ul.pricing-list li.disable::before { content: "\f057"; color: #24262b; }
+.iq-pricing-table ul.pricing-list li.disable::after { content: "\f057"; color: #24262b; }
 .iq-pricing-table ul.pricing-list li { margin-bottom: 10px; }
 .iq-pricing-table ul.pricing-list li:last-child { margin-bottom: 0; }
-.iq-pricing-table ul.pricing-list li::before { color: #ffb100; }
+.iq-pricing-table ul.pricing-list li::after { color: #ffb100; }
 .active .iq-pricing-table   h4 { color: #ffffff; }
 .active .iq-pricing-table { background: #24262b; color: #ffffff; transition: all 1s ease-in-out; transition: all 1s ease-in-out; -moz-transition: all 1s ease-in-out; -ms-transition: all 1s ease-in-out; -o-transition: all 1s ease-in-out; -webkit-transition: all 1s ease-in-out; transform: scale(1.2); }
-.active .iq-pricing-table ul.pricing-list li, .active .iq-pricing-table ul.pricing-list li::before { color: #ffffff; }
+.active .iq-pricing-table ul.pricing-list li, .active .iq-pricing-table ul.pricing-list li::after { color: #ffffff; }
 .active .iq-pricing-table .button { background: #ffb100; transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out; }
 
 
