@@ -40,67 +40,24 @@
               تیم توملای اماده ی پاسخگویی به شما در حداقل زمان ممکن است
             </p>
           </div>
-          <form class="contact-us" id="contact" method="post" style="text-align: right;">
+          <form class="contact-us" method="POST" style="text-align: right;">
             <div class="row">
+              {% csrf_token %}
               <div class="col-md-6">
-                <label
-                  >نام<br />
-                  <span class="form-control-wrap your-name">
-                    <input
-                      type="text"
-                      name="name"
-                      placeholder="نام"
-                      class="form-control text"
-                      aria-required="true"
-                      aria-invalid="false"
-                  /></span>
-                </label>
+                {{forms.name}}
               </div>
               <div class="col-md-6">
-                <label
-                  >ایمیل<br />
-                  <span class="form-control-wrap your-email">
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="ایمیل"
-                      class="form-control text email"
-                      aria-required="true"
-                      aria-invalid="false"
-                  /></span>
-                </label>
+                {{forms.email}}
               </div>
               <div class="col-xl-12">
-                <label>موضوع<br />
-                  <span class="form-control-wrap your-subject">
-                    <input
-                      type="text"
-                      name="subject"
-                      placeholder="موضوع"
-                      class="form-control text"
-                      aria-invalid="false"
-                  /></span>
-                </label>
+                {{forms.title}}
               </div>
               <div class="col-xl-12">
-                <label
-                  >پیام شما<br />
-                  <span class="form-control-wrap your-message">
-                    <textarea
-                      name="message"
-                      placeholder="پیام"
-                      class="form-control textarea"
-                      aria-invalid="false"
-                    ></textarea>
-                  </span>
-                </label>
+                {{forms.message}}
               </div>
               <div class="col-xl-12">
                 <button
-                  id="submit"
-                  name="submit"
                   type="submit"
-                  value="Send"
                   class="button btn-yellow"
                 >
                   ارسال

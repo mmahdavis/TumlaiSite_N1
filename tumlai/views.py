@@ -3,14 +3,9 @@ from django.shortcuts import render, redirect
 from blog.models import Post, PostConnectToCategory, Category
 from django.db.models import Q
 
-
 def home_page(request):
     posts = Post.objects.all()
     return render(request, 'index.html', {'posts': posts})
-
-
-def contact_us(request):
-    return render(request, 'contact_us.html', {})
 
 
 def about_us(request):
