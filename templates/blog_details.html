@@ -1,5 +1,6 @@
 {% extends 'main.html' %}
-{% load static %}  
+{% load static %}
+{% load comment_extras %}
 {% block title %}TuMLAI Blog{%endblock title %} 
 
 {% block content %}
@@ -34,111 +35,16 @@
   <section id="our-blog" class="blog has-post-thumbnail">
     <div class="container">
       <div class="row">
-        <div class="col-lg-4 col-md-4 order-lg-2 order-2">
-          <div id="search-2" class="widget widget_search">
-            <form method="get" class="search-form">
-              <label>
-                <span class="screen-reader-text">Search for:</span>
-              </label>
-              <input
-                type="search"
-                id="search-form-5cf6041521a93"
-                class="search-field"
-                placeholder="Search &hellip;"
-                value=""
-                name="s"
-              />
-              <button type="submit" class="search-submit">
-                <i class="fa fa-search"></i
-                ><span class="screen-reader-text">Search</span>
-              </button>
-            </form>
-          </div>
-          <div id="archives-2" class="widget widget_archive">
-            <h2 class="widget-title">Archives</h2>
-            <ul class="archives">
-              <li><a>May 2019</a></li>
-            </ul>
-          </div>
-          <div class="iq-widget-menu widget">
-            <h4 class="footer-title iq-rmt-30">Recent Post</h4>
-            <div class="list-inline iq-widget-menu">
-              <ul class="iq-post">
-                <li class="mt-3">
-                  <div class="post-img">
-                    <img
-                      width="150"
-                      height="150"
-                      src="{% static 'images/post/01.jpg' %}"
-                      class="img-fluid"
-                      alt=""
-                    />
-                  </div>
-                  <div class="post-blog">
-                    <div class="blog-box">
-                      <a href="two-column-blog.html">Construction industry</a>
-                      <ul>
-                        <li><a href="#">May 18, 2019</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-                <li class="mt-3">
-                  <div class="post-img">
-                    <img src="{% static 'images/post/02.jpg' %}" class="img-fluid" alt="" />
-                  </div>
-                  <div class="post-blog">
-                    <div class="blog-box">
-                      <a href="two-column-blog.html">Life Lack Meaning</a>
-                      <ul>
-                        <li><a href="#">May 18, 2019</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-                <li class="mt-3">
-                  <div class="post-img">
-                    <img src="{% static 'images/post/03.jpg' %}" class="img-fluid" alt="" />
-                  </div>
-                  <div class="post-blog">
-                    <div class="blog-box">
-                      <a href="two-column-blog.html">Content Marketing</a>
-                      <ul>
-                        <li><a href="#">May 18, 2019</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="widget">
-            <h4 class="widget-title iq-rmt-30">Categories</h4>
-            <ul class="category">
-              <li><a href="#">Business</a></li>
-              <li><a href="#">Design</a></li>
-              <li><a href="#">Fashion</a></li>
-              <li><a href="#">Photography</a></li>
-              <li><a href="#">Technology</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-8 col-md-8 order-lg-1 order-2 text-right dirrtl">
+        <div class="col-lg-12 col-md-12 order-lg-1 order-2 text-right dirrtl">
           <div class="iq-blog-box">
             <div class="iq-blog-image clearfix">
-              <img
-                src="{{ posts.image.url }}"
-                class="img-fluid center-block"
-                alt="blogimage0"
-              />
+              <img src="{{ posts.image.url }}"class="img-fluid center-block"alt="blogimage0"/>
             </div>
             <div class="iq-blog-detail">
               <div class="iq-blog-meta">
                 <ul>
                   <li class="list-inline-item">
-                    <a href="#" class="main-color" rel="bookmark"
-                      >{{ posts.data_date }}</a
-                    >
+                    <a href="#" class="main-color" rel="bookmark">{{ posts.data_date }}</a>
                   </li>
                 </ul>
               </div>
@@ -154,134 +60,40 @@
             </div>
           </div>
           <div id="comments" class="comments-area">
-            <h4 class="comments-title">3 Comment</h4>
+            <h4 class="comments-title">{{ comments|length }} کامنت</h4>
+            {% for comments in comments %}
             <ol class="commentlist">
               <li class="comment">
                 <article class="comment-body">
                   <div class="iq-comments-media">
                     <div class="iq-comment-wrap">
                       <div class="iq-comments-photo">
-                        <img class="img-fluid" src="{% static 'images/blog/02.png' %}" />
+                        <img class="img-fluid" src="{% static 'images/comments_avatar.jpg' %}" />
                       </div>
                       <div class="iq-comments-info">
-                        <h5 class="title">admin</h5>
+                        <h5 class="title">{{ comments.title }}</h5>
                         <div class="iq-comment-metadata">
                           <a href="#">
                             <time>
-                              <i class="fa fa-calendar"></i> May 28, 2019 at
-                              9:15 am
+                              <i class="fa fa-calendar"></i> {{ comments.comment_date }}
                             </time>
                           </a>
                         </div>
                         <div class="comment-content">
-                          <p>
-                            As a WordPress developer, whenever you build a new
-                            theme, plugin or even if you are testing out new
-                            features of WordPress that you might not be familiar
-                            with. There’s one task that get’s extremely
-                            repetitive, cumbersome and mundane.
-                          </p>
+                          <p>{{ comments.content_text }}</p>
                         </div>
                       </div>
-                      <div class="reply">
+                      <!-- <div class="reply">
                         <a href="#">Reply</a>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                 </article>
-                <ol class="children">
-                  <li class="comment">
-                    <article class="comment-body">
-                      <div class="iq-comments-media">
-                        <div class="iq-comment-wrap">
-                          <div class="iq-comments-photo">
-                            <img
-                              class="img-fluid"
-                              src="{% static 'images/blog/03.png' %}"
-                              alt="#"
-                            />
-                          </div>
-                          <div class="iq-comments-info">
-                            <h5 class="title">huck</h5>
-                            <div class="iq-comment-metadata">
-                              <a href="#">
-                                <time>
-                                  <i class="fa fa-calendar"></i>
-                                  May 28, 2019 at 11:12 am
-                                </time>
-                              </a>
-                            </div>
-                            <div class="comment-content">
-                              <p>
-                                Our goal with this post is to help you to
-                                alleviate this time-consuming aspect of the
-                                development process by covering a list of
-                                plugins that help you achieve this goal in just
-                                a matter of seconds.
-                              </p>
-                            </div>
-                          </div>
-                          <div class="reply">
-                            <a href="#">Reply</a>
-                          </div>
-                        </div>
-                      </div>
-                    </article>
-                    <ol class="children">
-                      <li class="comment">
-                        <article class="comment-body">
-                          <div class="iq-comments-media">
-                            <div class="iq-comment-wrap">
-                              <div class="iq-comments-photo">
-                                <img
-                                  class="img-fluid"
-                                  src="{% static 'images/blog/04.png' %}"
-                                  alt="#"
-                                />
-                              </div>
-                              <div class="iq-comments-info">
-                                <h5 class="title">ivanka</h5>
-                                <div class="iq-comment-metadata">
-                                  <a href="#">
-                                    <time>
-                                      <i class="fa fa-calendar"></i>
-                                      May 28, 2019 at 11:18 am
-                                    </time>
-                                  </a>
-                                </div>
-                                <!-- .comment-metadata -->
-                                <div class="comment-content">
-                                  <p>
-                                    The usual way people tend to do this is
-                                    either hire someone on Fiverr, to create all
-                                    this dummy text or as a WordPress developer
-                                    you’ll need to perform the task of filling
-                                    up an empty theme with dummy content
-                                    yourself.
-                                  </p>
-                                </div>
-                                <!-- .comment-content -->
-                              </div>
-                              <!-- .comment-author -->
-                              <div class="reply">
-                                <a href="#">Reply</a>
-                              </div>
-                              <!-- .reply -->
-                            </div>
-                          </div>
-                        </article>
-                        <!-- .comment-body -->
-                      </li>
-                      <!-- #comment-## -->
-                    </ol>
-                    <!-- .children -->
-                  </li>
-                  <!-- #comment-## -->
-                </ol>
                 <!-- .children -->
               </li>
               <!-- #comment-## -->
             </ol>
+            {% endfor %}
             <!-- .commentlist -->
             <!--  -->
           </div>

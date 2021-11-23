@@ -61,61 +61,30 @@
                         <h4 class="footer-title iq-rmt-30">پست های اخیر</h4>
                         <div class="list-inline iq-widget-menu">
                            <ul class="iq-post">
+                              {% for posts in posts|slice:":4" %}
                               <li class="mt-3">
                                  <div class="post-blog text-right" style='margin-right:10px'>
                                     <div class="blog-box">
-                                       <a href="two-column-blog.html">Construction industry</a>
+                                       <a href="two-column-blog.html">{{ posts.title }}</a>
                                        <ul>
-                                          <li><a href="#">May 18, 2019</a></li>
+                                          <li><a href="#">{{ posts.data_date }}</a></li>
                                        </ul>
                                     </div>
                                  </div>
                                  <div class="post-img">
-                                    <img width="150" height="150" src="{% static 'images/post/01.jpg' %}" class="img-fluid" alt=""/>
+                                    <img width="150" height="150" src="{{ posts.image.url }}" class="img-fluid" alt=""/>
                                  </div>
                               </li>
-                              <li class="mt-3">
-                                 <div class="post-blog text-right" style='margin-right:10px'>
-                                    <div class="blog-box">
-                                       <a href="two-column-blog.html">Construction industry</a>
-                                       <ul>
-                                          <li><a href="#">May 18, 2019</a></li>
-                                       </ul>
-                                    </div>
-                                 </div>
-                                 <div class="post-img">
-                                    <img width="150" height="150" src="{% static 'images/post/01.jpg' %}" class="img-fluid" alt=""/>
-                                 </div>
-                              </li>
-                              <li class="mt-3">
-                                 <div class="post-blog text-right" style='margin-right:10px'>
-                                    <div class="blog-box">
-                                       <a href="two-column-blog.html">Construction industry</a>
-                                       <ul>
-                                          <li><a href="#">May 18, 2019</a></li>
-                                       </ul>
-                                    </div>
-                                 </div>
-                                 <div class="post-img">
-                                    <img width="150" height="150" src="{% static 'images/post/01.jpg' %}" class="img-fluid" alt=""/>
-                                 </div>
-                              </li>
+                              {% endfor %}
                            </ul>
                         </div>
                      </div>
                      <div class="widget">
                         <h4 class="widget-title iq-rmt-30">دسته بندی</h4>
                         <ul class="category">
-                           <li><a href="#">Business</a>
-                           </li>
-                           <li><a href="#">Design</a>
-                           </li>
-                           <li><a href="#">Fashion</a>
-                           </li>
-                           <li><a href="#">Photography</a>
-                           </li>
-                           <li><a href="#">Technology</a>
-                           </li>
+                           {% for category in category %}
+                           <li><a href="#">{{ category.title }}</a></li>
+                           {% endfor %}
                         </ul>
                      </div>
                   </div>
@@ -124,9 +93,11 @@
                      <div class="iq-blog-box">
                         <div class="iq-blog-image clearfix">
                            <img src="{{ posts.image.url }}" class="img-fluid center-block" alt="blogimage0">
+                           {% for category in category %}
                            <ul class="iq-blogtag">
-                              <li><a href="#">Technology</a></li>
+                              <li><a href="#">{{ category.title }}</a></li>
                            </ul>
+                           {% endfor %}
                         </div>
                         <div class="iq-blog-detail">
                            <div class="iq-blog-meta">

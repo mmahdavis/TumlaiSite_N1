@@ -20,6 +20,7 @@ class Category(models.Model):
     title = models.CharField(max_length=75)
     post = models.ManyToManyField(
         Post,
+        related_name='PCTC',
         through='PostConnectToCategory',
         through_fields=('Category_id', 'post_id'),
     )
@@ -46,8 +47,11 @@ class PostComment(models.Model):
     title = models.CharField(max_length=100)
     comment_date = models.DateField()
     content_text = models.TextField(max_length=300)
-    parent_pk = models.IntegerField()
+    parent_pk = models.IntegerField(null=True, default=-1)
     publiched = models.BooleanField(default=False)
+
+    def __str__(self):
+        return str(self.post_id.id)
 
 
 class CustomerComment(models.Model):
