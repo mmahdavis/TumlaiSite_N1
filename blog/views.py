@@ -13,5 +13,4 @@ def blog_details(request, pk):
 def blog_list(request):
     posts = Post.objects.all()
     category = Category.objects.all()
-    cap = Category.objects.filter(project__name__contains="Foo")
     return render(request,'tumlai_blog.html', {'posts': posts, 'category': category})
