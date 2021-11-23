@@ -31,6 +31,8 @@ urlpatterns = [
     path('blogs/', blog_list, name="blog_list"),
 ]
 
+handler404 = not_found
+
 if settings.DEBUG:
     # add root static files
     urlpatterns = urlpatterns + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
