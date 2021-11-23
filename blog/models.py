@@ -2,6 +2,14 @@ from django.db import models
 from django.db.models.fields import CharField
 
 
+# Create your models here.
+
+class CommentManager(models.Manager):
+    def get_by_id(self, pk):
+        qs = self.get_queryset().filter(parent_pk=pk)
+        return qs
+
+
 class Post(models.Model):
     title = models.CharField(max_length=200)
     summary = models.TextField(max_length=400)
@@ -49,6 +57,7 @@ class PostComment(models.Model):
     content_text = models.TextField(max_length=300)
     parent_pk = models.IntegerField(null=True, default=-1)
     publiched = models.BooleanField(default=False)
+    object = CommentManager()
 
     def __str__(self):
         return str(self.post_id.id)
