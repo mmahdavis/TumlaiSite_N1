@@ -57,7 +57,7 @@ class PostComment(models.Model):
     content_text = models.TextField(max_length=300)
     parent_pk = models.IntegerField(null=True, default=-1)
     publiched = models.BooleanField(default=False)
-    object = CommentManager()
+    object = CommentManager
 
     def __str__(self):
         return str(self.post_id.id)
