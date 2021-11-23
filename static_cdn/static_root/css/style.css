@@ -86,7 +86,7 @@ header .container-fluid { padding: 15px 140px;}
 header .mega-menu .menu-logo>li>a{padding: 0px;}
 header .mega-menu .menu-logo>li>a:hover{background-color: transparent;}
 header .mega-menu .menu-logo>li>a img{height: 40px; position: relative; width: auto; left: 0px;}
-header .mega-menu *{font-family: open sans,sans-serif;}
+header .mega-menu *{font-family: 'IRANSansWeb',sans-serif;}
 header .mega-menu .drop-down-multilevel{top: 55px; -webkit-box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.15);-moz-box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.15);box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.15);}
 header .mega-menu .drop-down-multilevel .drop-down-multilevel{-webkit-box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.15);
@@ -455,13 +455,13 @@ header .mega-menu .menu-mobile-collapse-trigger:after{top: 23px;}
 --------------------------------------------------------------*/
 .iq-counter-box .iq-counter { text-align: center; padding-top: 60px; padding-bottom: 60px; }
 .iq-counter-box .iq-counter .timer { font-size: 62px; line-height: 72px; font-family: 'Poppins', sans-serif; color: #ffb100; font-weight: bold; margin-bottom: 10px; display: inline-block; width: 100%; }
-.iq-counter-box .iq-counter h6 { font-family: 'Open Sans', sans-serif; }
+.iq-counter-box .iq-counter h6 { font-family: ''IRANSansWeb'', sans-serif; }
 
 
 /*Style 2*/
 .iq-timer {margin: 0 30px; text-align: center;background-color: white; padding: 30px 15px; -webkit-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, .10); -moz-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, .10); box-shadow: 0px 10px 40px 0px rgba(0 ,0, 0 , .10); }
 .iq-timer .timer { margin-bottom: 10px; font-size: 40px; line-height: 52px; font-family: 'Poppins', sans-serif; color: #24262b; font-weight: bold; display: inline-block; width: 100%; }
-.iq-timer span { font-family: 'Open Sans', sans-serif; text-transform: uppercase; font-size: 16px; color: #6f6f6f; }
+.iq-timer span { font-family: ''IRANSansWeb'', sans-serif; text-transform: uppercase; font-size: 16px; color: #6f6f6f; }
 .timer-icon { width: 60px; height: 60px; margin: 0 auto; }
 .iq-timer i { color: #ffb100; }
 i.flaticon { font-size: 60px; line-height: 60px; margin-bottom: 15px; display: inline-block; vertical-align: middle; }
@@ -893,7 +893,7 @@ footer ul.category li:before{top: 13px;}
 .error-404 { text-align: center; }
 .error-404 .big-text { font-size: 240px; font-family: 'Poppins', sans-serif; line-height: 280px; color: #24262b; font-weight: 700; }
 .error-404 h4 { margin: 0 0 15px; }
-.error-404 h6 { font-family: 'Open Sans', sans-serif; }
+.error-404 h6 { font-family: ''IRANSansWeb'', sans-serif; }
 .error-404 .button { margin-top: 30px }
 .error-404 .search-form { display: inline-block; margin-top: 30px; width: 285px }
 

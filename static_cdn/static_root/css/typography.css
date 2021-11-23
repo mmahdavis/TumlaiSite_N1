@@ -48,13 +48,13 @@ Font
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Oswald:300,400,500,600,700&display=swap');
 @font-face {
-    font-family: 'Bnazanin1';
-    src: url('../fonts/bnazanin.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/bnazanin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../fonts/bnazanin.woff2') format('woff2'), /* Super Modern Browsers */
-         url('../fonts/bnazanin.woff') format('woff'), /* Pretty Modern Browsers */
-         url('../fonts/bnazanin.ttf')  format('truetype'), /* Safari, Android, iOS */
-         url('../fonts/bnazanin.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-family: 'IRANSansWeb';
+    src: url('../fonts/IRANSansWeb.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/IRANSansWeb.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/IRANSansWeb.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/IRANSansWeb.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../fonts/IRANSansWeb.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/IRANSansWeb.svg#svgFontName') format('svg'); /* Legacy iOS */
   }
 /*---------------------------------------------------------------------
 General
@@ -62,13 +62,13 @@ General
 *::-moz-selection { background: #ffb100; color: #ffffff; text-shadow: none; }
 ::-moz-selection { background: #ffb100; color: #ffffff; text-shadow: none; }
 ::selection { background: #ffb100; color: #ffffff; text-shadow: none; }
-body {font-family: 'Bnazanin1', sans-serif; font-weight: 500; font-style: normal; padding: 0;  font-size: 1em; line-height: 2; color: #6f6f6f;  }
+body {font-family: 'IRANSansWeb', sans-serif; font-weight: 500; font-style: normal; padding: 0;  font-size: 1em; line-height: 2; color: #6f6f6f;  }
 a, .btn { -webkit-transition: all 0.5s ease-out 0s; -moz-transition: all 0.5s ease-out 0s; -ms-transition: all 0.5s ease-out 0s; -o-transition: all 0.5s ease-out 0s; transition: all 0.5s ease-out 0s; }
 a:focus { text-decoration: none !important; }
 a:focus, a:hover { color: #ffb100; text-decoration: none !important; }
 a, button, input { outline: medium none !important; color: #ffffff; }
 .uppercase { text-transform: uppercase; }
-h1, h2, h3, h4, h5, h6, .display-1 { font-family: 'Bnazanin1', sans-serif; color: #24262b; margin: 0; -ms-word-wrap: break-word; word-wrap: break-word; line-height: 1.5em; font-weight: 500; text-transform: capitalize; }
+h1, h2, h3, h4, h5, h6, .display-1 { font-family: 'IRANSansWeb', sans-serif; color: #24262b; margin: 0; -ms-word-wrap: break-word; word-wrap: break-word; line-height: 1.5em; font-weight: 500; text-transform: capitalize; }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: inherit; }
 h1 { font-size: 3.052em; }
 h2 { font-size: 2.441em; }
@@ -139,7 +139,7 @@ input:hover, input.form-control:hover, input:focus, input.form-control:focus, te
 Section Title
 -----------------------------------------------------------------------*/
 .title-box {margin-bottom: 75px;}
-.title-box span {font-family: Bnazanin1,sans-serif;font-size: 18px; font-weight: 500;letter-spacing: 1px;color: #24262b;display: inline-block;}
+.title-box span {font-family: IRANSansWeb,sans-serif;font-size: 18px; font-weight: 500;letter-spacing: 1px;color: #24262b;display: inline-block;}
 .title-box .title  {margin-bottom: 15px; display: block; width: auto;}
 .title-box.text-left { margin-bottom: 30px; }
 
@@ -165,7 +165,7 @@ Back to Top
 /*---------------------------------------------------------------------
                           Scrollme Title
 -----------------------------------------------------------------------*/
-.scrolling-text { position: absolute; top: 5%; left: 6%; font-size: 100px; z-index: -1; line-height: 94px; font-family: 'Bnazanin1', sans-serif; font-weight: bold; text-transform: uppercase; color: #eeeeee;  }
+.scrolling-text { position: absolute; top: 5%; left: 6%; font-size: 100px; z-index: -1; line-height: 94px; font-family: 'IRANSansWeb', sans-serif; font-weight: bold; text-transform: uppercase; color: #eeeeee;  }
 .scrolling-text.middle { top: 33%; }
 .scrolling-text.bottam { bottom: 0%; top: inherit; }
 .scrolling-text.right { right: 5%; left: inherit; }
