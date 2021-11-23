@@ -47,21 +47,8 @@ Design and Developed by: iqonicthemes.in
 /*---------------------------------------------------------------------
                            set font site
 -----------------------------------------------------------------------*/
-@font-face {
-  @font-face {
-    font-family: 'Bnazanin1';
-    src: url('../fonts/bnazanin.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/bnazanin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../fonts/bnazanin.woff2') format('woff2'), /* Super Modern Browsers */
-         url('../fonts/bnazanin.woff') format('woff'), /* Pretty Modern Browsers */
-         url('../fonts/bnazanin.ttf')  format('truetype'), /* Safari, Android, iOS */
-         url('../fonts/bnazanin.svg#svgFontName') format('svg'); /* Legacy iOS */
-  }
-}
 
-body{
-  font-family: 'Bnazanin1';
-}
+
 
 /*---------------------------------------------------------------------
                            end font section
@@ -1086,7 +1073,7 @@ ul.pricing-list li.disable::after { color: #ffb100; }
 .iq-pricing:hover .button { background: #ffb100; transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out; }
 
 /* Style 2*/
-.iq-pricing-table { border: 2px solid #24262b; padding: 60px; }
+.iq-pricing-table { border: 2px solid #24262b; padding: 10px; }
 .iq-pricing-table  .priceing-heading  h2 { color: #ffb100; font-size: 60px; }
 .iq-pricing-table  .priceing-heading  h2 span { font-size: 16px; font-weight: 400; }
 .iq-pricing-table ul.pricing-list li.disable::after { content: "\f057"; color: #24262b; }
