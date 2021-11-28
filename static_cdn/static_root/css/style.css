@@ -696,7 +696,7 @@ footer .widget .footer-title { margin-bottom: 15px; }
 .widget ul.menu li a {display: inline-block; width: 100%; border-bottom: 1px solid #eeeeee;}
 footer .widget ul li a, footer .widget ul.menu li a { padding: 7px 0 7px 15px;}
 footer .widget ul li a:before, footer .widget ul.menu li a:before { top: 21px; }
-footer .widget  { padding-left: 0; font-size: 16px; color: #24262b; }
+footer .widget  { padding-left: 0; font-size: 16px; color: #ffffff; }
 footer .widget  { display: inline-block; width: 100%; margin: 5px 0; margin-bottom: 45px; }
 footer .widget .rsswidget:before {display: none; }
 footer .widget ul.menu li .sub-menu { padding-left: 10px; }
@@ -869,7 +869,7 @@ ul.category li a:before, ul.archives li a::after { position: absolute; content: 
 /*SideBar - Search*/
 .search-form { position: relative; }
 .search-form label { display: none; }
-.search-form input { text-align: right; padding-right: 40px; box-shadow: none; border-radius: 0; color: #24262b; border: 2px solid #24262b; background: #fff; transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; }
+.search-form input { text-align: right; padding-right: 40px; box-shadow: none; border-radius: 0; color: #ffffff; border: 2px solid #24262b; background: #fff; transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; }
 .search-form input:focus, .search-form input[type=text]:focus, .search-form input[type=email]:focus, .search-form input[type=search]:focus, .search-form input[type=password]:focus { border: 2px solid #ffb100; }
 .search-form .search-submit { position: absolute; right: 0; top: 0; color: #24262b; cursor: pointer; padding: 5px 15px; font-size: 18px; background: none; border: none; outline: none; box-shadow: none; }
 .search-form .search-submit .screen-reader-text { display: none; }
@@ -1228,3 +1228,11 @@ blockquote { background: #eeeeee; padding: 15px 30px; border-left: 5px solid #ff
 .share ul li { display: inline-block; float: left; margin-right: 10px; }
 .share ul li a { height: 45px; width: 45px; border-radius: 90px; display: inline-block; background: #24262b; color: #ffffff; text-align: center; line-height: 45px; }
 .share ul li a:hover { background: #ffb100; color: #ffffff; }
+
+
+.backbalck{
+  background: #000000;
+}
+.textwhite{
+  color: #ffffff;
+}

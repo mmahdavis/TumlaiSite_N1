@@ -1,5 +1,6 @@
 from django.db import models
 from django.db.models.fields import CharField
+from datetime import date
 
 
 # Create your models here.
@@ -52,8 +53,9 @@ class Tag(models.Model):
 class PostComment(models.Model):
     post_id = models.ForeignKey(Post, on_delete=models.CASCADE)
     user_name = models.CharField(max_length=30)
+    email = models.EmailField()
     title = models.CharField(max_length=100)
-    comment_date = models.DateField()
+    comment_date = models.DateField(auto_now=True)
     content_text = models.TextField(max_length=300)
     parent_pk = models.IntegerField(null=True, default=-1)
     publiched = models.BooleanField(default=False)
@@ -75,7 +77,7 @@ class CustomerComment(models.Model):
 
 class PostConnectToTag(models.Model):
     class Meta:
-        verbose_name='Tag'
+        verbose_name = 'Tag'
         verbose_name_plural = 'Tag'
 
     post_id = models.ForeignKey(Post, on_delete=models.CASCADE)
@@ -84,7 +86,7 @@ class PostConnectToTag(models.Model):
 
 class PostConnectToCategory(models.Model):
     class Meta:
-        verbose_name='Category'
+        verbose_name = 'Category'
         verbose_name_plural = 'Category'
 
     post_id = models.ForeignKey(Post, on_delete=models.CASCADE)

@@ -102,77 +102,30 @@
               Your email address will not be published. Required fields are
               marked *
             </p>
+            {% include 'messages.html' %}
           </div>
 
-          <form class="contact-us mt-3" id="iq-contact-form" method="post">
+          <form class="contact-us" method="POST" style="text-align: right;">
             <div class="row">
+              {% csrf_token %}
+              <div class="col-md-6">
+                {{forms.name}}
+              </div>
+              <div class="col-md-6">
+                {{forms.email}}
+              </div>
               <div class="col-xl-12">
-                <label
-                  >Comment<br />
-                  <span class="form-control-wrap your-message">
-                    <textarea
-                      name="message"
-                      placeholder="Comment"
-                      class="form-control textarea"
-                      aria-invalid="false"
-                    ></textarea>
-                  </span>
-                </label>
+                {{forms.title}}
               </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4">
-                <label
-                  >Your Name<br />
-                  <span class="form-control-wrap your-name">
-                    <input
-                      type="text"
-                      name="name"
-                      placeholder="Your Name"
-                      class="form-control text"
-                      aria-required="true"
-                      aria-invalid="false"
-                  /></span>
-                </label>
+              <div class="col-xl-12">
+                {{forms.message}}
               </div>
-              <div class="col-md-4">
-                <label
-                  >Your Email<br />
-                  <span class="form-control-wrap your-email">
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Email"
-                      class="form-control text email"
-                      aria-required="true"
-                      aria-invalid="false"
-                  /></span>
-                </label>
-              </div>
-              <div class="col-md-4">
-                <label
-                  >Website<br />
-                  <span class="form-control-wrap your-website">
-                    <input
-                      type="text"
-                      name="website"
-                      placeholder="website"
-                      class="form-control text"
-                      aria-invalid="false"
-                  /></span>
-                </label>
-              </div>
-            </div>
-            <div class="row">
               <div class="col-xl-12">
                 <button
-                  id="submit"
-                  name="submit"
                   type="submit"
-                  value="Send"
-                  class="button btn-yellow mt-4"
+                  class="button btn-yellow"
                 >
-                  Post Comment
+                  ارسال
                 </button>
               </div>
             </div>

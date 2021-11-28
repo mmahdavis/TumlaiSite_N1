@@ -24,14 +24,14 @@
   </head>
   <body>
     <!-- loading -->
-    <div id="loading" style="background: #000000;">
+    <div class="backbalck" id="loading">
       <div id="loading-center">
         <img src="{% static 'images/preloader.gif' %}" alt="loader">
       </div>
     </div>
     <!-- loading End -->
     <!-- Header Start -->
-    <header id="main-header" class="header-one"  style="background: #000000;">
+    <header id="main-header" class="header-one backbalck">
       <div class="topbar" style="background: #333333;">
         <div class="container-fluid">
           <div class="row">
@@ -73,7 +73,7 @@
       <!-- menu start -->
       <nav id="menu-1" class="mega-menu" data-color="">
         <!-- menu list items container -->
-        <div class="menu-list-items">
+        <div class="menu-list-items backbalck">
           <div class="container-fluid">
             <div class="row">
               <div class="col-sm-12">
@@ -102,7 +102,7 @@
     {% block content %}{% endblock content %}
 
     <!-- Footer Start -->
-    <footer>
+    <footer class="backbalck">
       <div class="container" style="direction: rtl; text-align: right;">
         <div class="footer-top mt-5">
           <div class="row">
@@ -113,46 +113,46 @@
                   alt="bizbag1">
                 </a>
               </div>
-              <div class="widget">
+              <div class="widget backbalck">
                 <div class="textwidget">
-                  <p>
+                  <p class="textwhite">
                     یک متن درباره خودمون
                   </p>
                 </div>
               </div>
             </div>
             <div class="col-lg-2 col-md-6 col-sm-6">
-              <div class="widget">
-                <h4 class="footer-title">منو</h4>
+              <div class="widget backbalck">
+                <h4 class="footer-title textwhite">منو</h4>
                 <ul>
-                  <li><a href="index" aria-current="page">خانه</a></li>
-                  <li><a href="aboutus">درباره ما </a></li>
-                  <li><a href="contact">ارتباط با ما</a></li>
-                  <li><a href="bloglist">وبلاگ</a></li>
+                  <li><a href="index" aria-current="page" class="textwhite">خانه</a></li>
+                  <li><a href="aboutus" class="textwhite">درباره ما </a></li>
+                  <li><a href="contact" class="textwhite">ارتباط با ما</a></li>
+                  <li><a href="bloglist" class="textwhite">وبلاگ</a></li>
                 </ul>
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="widget">
-                <h4 class="footer-title iq-rmt-30">ارشیو</h4>
+              <div class="widget backbalck">
+                <h4 class="footer-title textwhite iq-rmt-30">ارشیو</h4>
                 <ul>
-                  <li><a href="">May 2019</a>&nbsp;(8)</li>
+                  <li><a href="" class="textwhite">May 2019</a>&nbsp;(8)</li>
                 </ul>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="widget">
-                <h4 class="footer-title contact-info">تماس با ما</h4>
+              <div class="widget backbalck">
+                <h4 class="footer-title textwhite contact-info">تماس با ما</h4>
                 <ul class="iq-contact">
                   <li>
-                    <a href="tel:+989157006752"><i class="fas fa-phone"></i> 09157006752</a>
+                    <a href="tel:+989157006752" class="textwhite"><i class="fas fa-phone"></i> 09157006752</a>
                   </li>
                   <li>
-                    <a href="mailto:support@tumlai.ir"><i class="fas fa-envelope"></i> support@tumlai.ir</a>
+                    <a href="mailto:support@tumlai.ir" class="textwhite"><i class="fas fa-envelope"></i> support@tumlai.ir</a>
                   </li>
                   <li></li>
                   <li>
-                    <p><i class="fas fa-map-marker-alt"></i> مشهد، تقاطع مجد و قرنی، برج ساینا، ط اول، واحد 122</p>
+                    <p><i class="fas fa-map-marker-alt" class="textwhite"></i> مشهد، تقاطع مجد و قرنی، برج ساینا، ط اول، واحد 122</p>
                   </li>
                 </ul>
               </div>
