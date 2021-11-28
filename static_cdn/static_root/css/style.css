@@ -68,7 +68,7 @@ header .topbar{background: #eeeeee;}
 header .number-info ul { margin: 0; padding: 0; }
 header .number-info li { list-style: none; float: left; margin-right: 15px; }
 header .number-info li:last-child { margin-right: 0; }
-header .number-info li a { color: #24262b; }
+header .number-info li a { color: #ffffff; }
 header .number-info li a:hover { color: #ffb100; text-decoration: none; }
 header .number-info li a i { margin-right: 5px; }
 header nav { display: flex; }
@@ -92,7 +92,7 @@ header .mega-menu .drop-down-multilevel .drop-down-multilevel{-webkit-box-shadow
     -moz-box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.15);}
 header .mega-menu .menu-links>li{margin-right: 5px;}
-header .mega-menu .menu-links>li>a {color: #24262b; font-size: 16px; padding: 8px 15px; line-height: 24px; }
+header .mega-menu .menu-links>li>a {color: white; font-size: 16px; padding: 8px 15px; line-height: 24px; }
 header .mega-menu .menu-links>li>a:hover{color: #ffffff;}
 header .mega-menu .menu-links>li.active{background-color: #ffb100; color: #ffffff;}
 header .mega-menu .menu-links>li:hover {background-color: #ffb100;}
@@ -719,7 +719,7 @@ footer .widget  li a:before { display: none; }
 .social-icone ul { margin: 0; padding: 0; }
 .social-icone ul li { list-style: none; margin: 0 7px; }
 .social-icone ul li:last-child a { margin-right: 0;}
-.social-icone ul li a { color:#6f6f6f; }
+.social-icone ul li a { color:#ffffff; }
 .social-icone ul li a:hover { color: #ffb100; }
 
 /* Footer 3 */

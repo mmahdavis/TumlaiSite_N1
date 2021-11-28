@@ -117,11 +117,19 @@
                         </div>
                      </div>
                      {% endfor %}
-                     <ul class="page-numbers">
-                        <li><span aria-current="page" class="page-numbers current">1</span></li>
-                        <li><a class="page-numbers" href="#">2</a></li>
-                        <li><a class="next page-numbers" href="#">Next page</a></li>
-                     </ul>
+                     <div class="pagination">
+                           <span class="step-links">
+                           {% if page.has_previous %}
+                              <a href="?page={{ page.previous_page_number }}">Previous</a>
+                           {% endif %}
+                              <span class="current">
+                              Page {{ page.number }} of {{ page.paginator.num_pages }}.
+                           </span>
+                              {% if page.has_next %}
+                                  <a href="?page={{ page.next_page_number }}">Next</a>
+                              {% endif %}
+                         </span>
+                     </div>
                   </div>
                </div>
             </div>
