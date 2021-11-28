@@ -870,7 +870,7 @@ footer.footer5 .social-icone ul li a{color: #ffffff;}
                            Blog - SideBar
 -----------------------------------------------------------------------*/
 .iq-post-sidebar { height: 100%; }
-.widget { margin-bottom: 45px; padding: 16px; -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; display: inline-block; width: 100%; float: left; position: relative; background: #000000; }
+.widget { margin-bottom: 45px; padding: 16px; -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; display: inline-block; width: 100%; float: left; position: relative; }
 .widget:last-child { margin-bottom: 0; }
 .widget .widget-title { margin-bottom: 15px; padding-bottom: 0; font-size: 1.25em; position: relative; }
 ul.category li a:before, ul.archives li a::after { position: absolute; content: "\f111"; color: #ffb100; top: 9px; font-size: 5px; right: 0; font-family: "Font Awesome 5 Free"; font-weight: 900; line-height: normal; transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out;}
