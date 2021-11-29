@@ -43,36 +43,45 @@
                <div class="row">
                   <div class="col-lg-4 col-md-4 order-lg-2 order-2">
                      <div id="search-2" class="widget widget_search">
-                        <form method="get" class="search-form">
-                           <label>
-                           <span class="screen-reader-text">Search for:</span>
-                           </label>
-                           <input type="search" id="search-form-5cf6041521a93" class="search-field" placeholder="جستجو" &hellip;" value="" name="s" />
-                           <button type="submit" class="search-submit"><i class="fa fa-search"></i><span class="screen-reader-text">Search</span></button>
+                        <form class="contact-us" method="POST" style="text-align: right;">
+                           <div class="row">
+                             {% csrf_token %}
+                             <div class="col-md-12">
+                               {{forms.search}}
+                             </div>
+                             <div class="col-xl-12">
+                               <button
+                                 type="submit"
+                                 class="button btn-yellow"
+                               >
+                                 جست و جو
+                               </button>
+                             </div>
+                           </div>
                         </form>
                      </div>
-                     <div id="archives-2" class="widget widget_archive text-right">
+<!--                      <div id="archives-2" class="widget widget_archive text-right">
                         <h2 class="widget-title">آرشیو</h2>
                         <ul class="archives text-right">
                            <li><a>اردیبهشت ماه 1400</a></li>
                         </ul>
-                     </div>
+                     </div> -->
                      <div class="iq-widget-menu widget text-right">
                         <h4 class="footer-title iq-rmt-30">پست های اخیر</h4>
                         <div class="list-inline iq-widget-menu">
                            <ul class="iq-post">
-                              {% for posts in posts|slice:":4" %}
+                              {% for post in recent_post|slice:":4" %}
                               <li class="mt-3">
                                  <div class="post-blog text-right" style='margin-right:10px'>
                                     <div class="blog-box">
-                                       <a href="two-column-blog.html">{{ posts.title }}</a>
+                                       <a href="two-column-blog.html">{{ post.title }}</a>
                                        <ul>
-                                          <li><a href="#">{{ posts.data_date }}</a></li>
+                                          <li><a href="#">{{ post.data_date }}</a></li>
                                        </ul>
                                     </div>
                                  </div>
                                  <div class="post-img">
-                                    <img width="150" height="150" src="{{ posts.image.url }}" class="img-fluid" alt=""/>
+                                    <img width="150" height="150" src="{{ post.image.url }}" class="img-fluid" alt=""/>
                                  </div>
                               </li>
                               {% endfor %}
@@ -89,31 +98,31 @@
                      </div>
                   </div>
                   <div class="col-lg-8 col-md-8 order-lg-1 order-2">
-                     {% for posts in posts %}
+                     {% for post in posts %}
                      <div class="iq-blog-box">
                         <div class="iq-blog-image clearfix">
-                           <img src="{{ posts.image.url }}" class="img-fluid center-block" alt="blogimage0">
-                           {% for category in category %}
+                           <img src="{{ post.image.url }}" class="img-fluid center-block" alt="blogimage0">
                            <ul class="iq-blogtag">
-                              <li><a href="#">{{ category.title }}</a></li>
+                              {% for category in post.category.all %}
+                              <li><a href="#">{{ category }}</a></li>
+                              {% endfor %}
                            </ul>
-                           {% endfor %}
                         </div>
                         <div class="iq-blog-detail">
                            <div class="iq-blog-meta">
                               <ul>
                                  <li class="list-inline-item">
-                                    <a href="#" class="main-color" rel="bookmark">{{ posts.data_date }}</a>
+                                    <a href="#" class="main-color" rel="bookmark">{{ post.data_date }}</a>
                                  </li>
                               </ul>
                            </div>
                            <div class="blog-title">
-                              <a href="/blog/{{ posts.id }}">
-                                 <h5>{{ posts.title }}</h5>
+                              <a href="/blog/{{ post.id }}">
+                                 <h5>{{ post.title }}</h5>
                               </a>
                            </div>
-                           <p>{{ posts.summary }}</p>
-                           <a class="btn-link" href="/blog/{{ posts.id }}">بیشتر<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                           <p>{{ post.summary }}</p>
+                           <a class="btn-link" href="/blog/{{ post.id }}">بیشتر<i class="fa fa-angle-right" aria-hidden="true"></i></a>
                         </div>
                      </div>
                      {% endfor %}

@@ -38,6 +38,11 @@
           <div class="iq-blog-box">
             <div class="iq-blog-image clearfix">
               <img src="{{ posts.image.url }}"class="img-fluid center-block"alt="blogimage0"/>
+              <ul class="iq-blogtag">
+                {% for category in posts.category.all %}
+                <li><a href="#">{{ category }}</a></li>
+                {% endfor %}
+             </ul>
             </div>
             <div class="iq-blog-detail">
               <div class="iq-blog-meta">

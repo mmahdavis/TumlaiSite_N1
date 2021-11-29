@@ -11,6 +11,21 @@ class CommentManager(models.Manager):
         return qs
 
 
+class Category(models.Model):
+    title = models.CharField(max_length=75)
+
+    # obj = CategoryManager()
+    def __str__(self):
+        return "%s" % (self.title)
+
+
+class Tag(models.Model):
+    title = models.CharField(max_length=75)
+
+    def __str__(self):
+        return "%s" % (self.title)
+
+
 class Post(models.Model):
     title = models.CharField(max_length=200)
     summary = models.TextField(max_length=400)
@@ -23,20 +38,8 @@ class Post(models.Model):
         width_field=None,
         max_length=100,
         )
-
-
-class Category(models.Model):
-    title = models.CharField(max_length=75)
-    post = models.ManyToManyField("Post")
-    def __str__(self):
-        return "%s" % (self.title)
-
-
-class Tag(models.Model):
-    title = models.CharField(max_length=75)
-    post = models.ManyToManyField("Post")
-    def __str__(self):
-        return "%s" % (self.title)
+    category = models.ManyToManyField("Category")
+    tag = models.ManyToManyField("Tag")
 
 
 class PostComment(models.Model):

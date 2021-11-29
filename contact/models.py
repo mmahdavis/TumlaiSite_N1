@@ -1,6 +1,7 @@
 from django.contrib.admin.sites import site
 from django.db import models
 
+
 # Create your models here.
 class MessageContact(models.Model):
     class Meta:

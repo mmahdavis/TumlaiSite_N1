@@ -30,12 +30,22 @@ def blog_details(request, pk):
             messages.error(request, 'خطا در ارتباط با سرور')
             return redirect('/blog/%s/' % (pk))
 
-    return render(request, 'blog_details.html', {'posts': posts, 'comments': comments,'forms': form})
+    return render(request, 'blog_details.html', {'posts': posts, 'comments': comments, 'forms': form})
 
 
-def blog_list(request, tag_slug=None):
-    posts = Post.objects.all()
+def blog_list(request):
+    recent_post = Post.objects.all()
     category = Category.objects.all()
+    form = SearchForm(request.POST or None)
+    posts = []
+    if request.method == 'POST':
+        if form.is_valid():
+            search = form.cleaned_data.get('search')
+            posts = Post.objects.filter(title__icontains=search).distinct()
+
+    else:
+        posts = Post.objects.all()
+
     paginator = Paginator(posts, 2)
     page = request.GET.get('page')
     try:
@@ -46,18 +56,11 @@ def blog_list(request, tag_slug=None):
     except EmptyPage:
         # If page is out of range deliver last page of results
         posts = paginator.page(paginator.num_pages)
-    return render(request, 'tumlai_blog.html', {'posts': posts, 'category': category, 'page': page})
-
-
-def search(request):
-
-    template_name = 'tumlai_blog.html'
-
-    query = request.GET.get('q', '')
-    if query:
-        # query example
-        results = Post.objects.filter(name__icontains=query).distinct()
-    else:
-        results = []
-    return render(
-        request, template_name, {'results': results})
+    context = {
+        'page': page,
+        'posts': posts,
+        'forms': form,
+        'recent_post': recent_post,
+        'category': category
+        }
+    return render(request, 'tumlai_blog.html', context)
