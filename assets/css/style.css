@@ -59,9 +59,6 @@ Design and Developed by: iqonicthemes.in
                            Header
 -----------------------------------------------------------------------*/
 
-.backbalck{
-  background: #000000;
-}
 .textwhite{
   color: #ffffff;
 }
@@ -1237,3 +1234,7 @@ blockquote { background: #eeeeee; padding: 15px 30px; border-left: 5px solid #ff
 .share ul li a { height: 45px; width: 45px; border-radius: 90px; display: inline-block; background: #24262b; color: #ffffff; text-align: center; line-height: 45px; }
 .share ul li a:hover { background: #ffb100; color: #ffffff; }
 
+
+.backbalck{
+  background: #000000;
+}

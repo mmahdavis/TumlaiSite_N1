@@ -1,6 +1,6 @@
 from django.contrib.auth import authenticate, login, get_user_model
 from django.shortcuts import render, redirect
-from blog.models import Post, PostConnectToCategory, Category
+from blog.models import Post, Category
 from django.db.models import Q
 from django.http import HttpResponseNotFound
 

@@ -1,6 +1,6 @@
 from django.contrib.auth import authenticate, login, get_user_model
 from django.shortcuts import render, redirect
-from blog.models import Post, PostConnectToCategory, Category, PostComment
+from blog.models import Post, Category, PostComment
 from django.db.models import Q
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib import messages
@@ -47,3 +47,17 @@ def blog_list(request, tag_slug=None):
         # If page is out of range deliver last page of results
         posts = paginator.page(paginator.num_pages)
     return render(request, 'tumlai_blog.html', {'posts': posts, 'category': category, 'page': page})
+
+
+def search(request):
+
+    template_name = 'tumlai_blog.html'
+
+    query = request.GET.get('q', '')
+    if query:
+        # query example
+        results = Post.objects.filter(name__icontains=query).distinct()
+    else:
+        results = []
+    return render(
+        request, template_name, {'results': results})

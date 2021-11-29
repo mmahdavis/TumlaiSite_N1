@@ -58,6 +58,11 @@ Design and Developed by: iqonicthemes.in
 /*---------------------------------------------------------------------
                            Header
 -----------------------------------------------------------------------*/
+
+.textwhite{
+  color: #ffffff;
+}
+
 .dirrtl{
   direction: rtl;
 }
@@ -696,7 +701,7 @@ footer .widget .footer-title { margin-bottom: 15px; }
 .widget ul.menu li a {display: inline-block; width: 100%; border-bottom: 1px solid #eeeeee;}
 footer .widget ul li a, footer .widget ul.menu li a { padding: 7px 0 7px 15px;}
 footer .widget ul li a:before, footer .widget ul.menu li a:before { top: 21px; }
-footer .widget  { padding-left: 0; font-size: 16px; color: #ffffff; }
+footer .widget  { padding-left: 0; font-size: 16px; color: #000000; }
 footer .widget  { display: inline-block; width: 100%; margin: 5px 0; margin-bottom: 45px; }
 footer .widget .rsswidget:before {display: none; }
 footer .widget ul.menu li .sub-menu { padding-left: 10px; }
@@ -862,7 +867,7 @@ footer.footer5 .social-icone ul li a{color: #ffffff;}
                            Blog - SideBar
 -----------------------------------------------------------------------*/
 .iq-post-sidebar { height: 100%; }
-.widget { margin-bottom: 45px; padding: 16px; -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; display: inline-block; width: 100%; float: left; position: relative; background: #ffffff; }
+.widget { margin-bottom: 45px; padding: 16px; -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; display: inline-block; width: 100%; float: left; position: relative; }
 .widget:last-child { margin-bottom: 0; }
 .widget .widget-title { margin-bottom: 15px; padding-bottom: 0; font-size: 1.25em; position: relative; }
 ul.category li a:before, ul.archives li a::after { position: absolute; content: "\f111"; color: #ffb100; top: 9px; font-size: 5px; right: 0; font-family: "Font Awesome 5 Free"; font-weight: 900; line-height: normal; transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out;}
@@ -1232,7 +1237,4 @@ blockquote { background: #eeeeee; padding: 15px 30px; border-left: 5px solid #ff
 
 .backbalck{
   background: #000000;
-}
-.textwhite{
-  color: #ffffff;
 }
